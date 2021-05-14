@@ -1,12 +1,10 @@
 <template>
-  <div class="container flex h-screen md:my-6 mx-auto relative">
+  <div class="container flex h-screen md:py-6 mx-auto relative">
     <sidebar-primary />
     <Nuxt />
   </div>
 </template>
 
-<script>
-</script>
+<script></script>
 
-<style>
-</style>
+<style></style>

@@ -17,7 +17,7 @@ export default {
   css: ['~/assets/css/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~/plugins/vue-anime.js', mode: 'client' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -45,15 +45,11 @@ export default {
         imports: [
           {
             set: '@fortawesome/free-solid-svg-icons',
-            icons: [
-              'faBars',
-              'faUserCircle',
-              'faCloudDownloadAlt',
-              'faBriefcase',
-              'faGlasses',
-              'faBlog',
-              'faPhoneAlt',
-            ],
+            icons: ['faBars', 'faCloudDownloadAlt'],
+          },
+          {
+            set: '@fortawesome/free-brands-svg-icons',
+            icons: ['faFacebook', 'faGithub', 'faTwitter'],
           },
         ],
       },

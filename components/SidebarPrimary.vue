@@ -25,7 +25,7 @@
       </ul>
     </nav>
 
-    <button class="w-16 h-16 border-t">
+    <button class="w-16 h-16 border-t" data-tooltip="Download Resume">
       <fa
         :icon="['fas', 'cloud-download-alt']"
         class="text-blue-500 text-2xl"

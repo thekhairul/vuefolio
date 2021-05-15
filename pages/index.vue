@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <main id="profile" class="flex-grow border h-full shadow-lg"></main>
 </template>
 
 <script>

@@ -30,6 +30,16 @@ export default {
     '@nuxtjs/tailwindcss',
     // https://github.com/nuxt-community/svg-module
     '@nuxtjs/svg',
+    // https://github.com/nuxt-community/google-fonts-module
+    [
+      '@nuxtjs/google-fonts',
+      {
+        display: 'swap',
+        families: {
+          Poppins: [200, 400, 500, 800],
+        },
+      },
+    ],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

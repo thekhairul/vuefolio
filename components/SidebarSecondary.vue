@@ -1,5 +1,5 @@
 <template>
-  <aside id="intro" class="h-full w-64 border mx-4 shadow-lg">
+  <aside id="intro" class="flex flex-col h-full w-64 border mx-4 shadow-lg">
     <div class="text-center p-4 border-b mb-4">
       <img
         src="~/assets/images/thekhairul.jpg"
@@ -13,16 +13,67 @@
       <social-handles />
     </div>
 
-    <div class="px-4 mb-4">
-      <h4 class="font-extralight">
-        <b class="font-medium">Residence:</b> Bangladesh
-      </h4>
-      <h4 class="font-extralight"><b class="font-medium">City:</b> Dhaka</h4>
-      <h4 class="font-extralight"><b class="font-medium">Age:</b> 28</h4>
-      <hr class="mt-4" />
-    </div>
+    <div class="max-h-full flex-1 flex flex-col justify-between">
+      <div class="overflow-y-auto overflow-x-hidden">
+        <div class="px-4 mb-4">
+          <h4 class="font-extralight">
+            <b class="font-medium">Residence:</b> Bangladesh
+          </h4>
+          <h4 class="font-extralight">
+            <b class="font-medium">City:</b> Dhaka
+          </h4>
+          <h4 class="font-extralight">
+            <b class="font-medium">Age:</b>
+            {{ new Date().getFullYear() - 1992 }}
+          </h4>
+          <hr class="mt-4" />
+        </div>
 
-    <skillsbar />
+        <skillsbar />
+      </div>
+
+      <div class="flex border-t h-16">
+        <div
+          class="en flex-1 flex flex-col justify-center items-center border-r"
+          data-tooltip="English"
+        >
+          <progress-ring
+            :radius="25"
+            :progress="75"
+            :stroke="4"
+            stroke-color="rgba(37, 99, 235, 1)"
+            fill-color="rgba(59, 130, 246, 1)"
+            label="En"
+          />
+        </div>
+        <div
+          class="bn flex-1 flex justify-center items-center border-r"
+          data-tooltip="Bangla"
+        >
+          <progress-ring
+            :radius="25"
+            :progress="100"
+            :stroke="4"
+            stroke-color="rgba(37, 99, 235, 1)"
+            fill-color="rgba(59, 130, 246, 1)"
+            label="Bn"
+          />
+        </div>
+        <div
+          class="hn flex-1 flex justify-center items-center"
+          data-tooltip="Hindi"
+        >
+          <progress-ring
+            :radius="25"
+            :progress="50"
+            :stroke="4"
+            stroke-color="rgba(37, 99, 235, 1)"
+            fill-color="rgba(59, 130, 246, 1)"
+            label="Hn"
+          />
+        </div>
+      </div>
+    </div>
   </aside>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <aside id="intro" class="flex flex-col h-full w-64 border mx-4 shadow-lg">
+  <aside id="intro" class="flex flex-col h-full w-64 mx-4 shadow-lg">
     <div class="text-center p-4 border-b mb-4">
       <img
         src="~/assets/images/thekhairul.jpg"
@@ -13,8 +13,8 @@
       <social-handles />
     </div>
 
-    <div class="max-h-full flex-1 flex flex-col justify-between">
-      <div class="overflow-y-auto overflow-x-hidden">
+    <div class="flex flex-col h-full justify-between max-h-full">
+      <div class="flex-grow overflow-y-auto">
         <div class="px-4 mb-4">
           <h4 class="font-extralight">
             <b class="font-medium">Residence:</b> Bangladesh

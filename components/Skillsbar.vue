@@ -21,7 +21,6 @@
             :key="id"
             :style="getSkillPhaseStyle(phase, skill.phase)"
             class="rounded-full inline-block"
-            :data-tooltip="phase"
           ></span>
         </div>
       </li>

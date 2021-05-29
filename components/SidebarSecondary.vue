@@ -1,5 +1,8 @@
 <template>
-  <aside id="intro" class="flex flex-col h-full w-64 mx-4 shadow-lg">
+  <aside
+    id="intro"
+    class="flex flex-col h-full w-64 ml-4 shadow-lg relative z-10"
+  >
     <div class="text-center p-4 border-b mb-4">
       <img
         src="~/assets/images/thekhairul.jpg"
@@ -78,7 +81,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'SidebarSecondary',
+};
 </script>
 
 <style></style>

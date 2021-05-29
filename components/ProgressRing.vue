@@ -26,6 +26,7 @@
 
 <script>
 export default {
+  name: 'ProgressRing',
   props: {
     radius: {
       type: Number,

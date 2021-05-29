@@ -31,6 +31,7 @@
 <script>
 const skillPhases = ['Beginner', 'Professional', 'Expert', 'Advanced'];
 export default {
+  name: 'Skillsbar',
   data() {
     return {
       skills: [

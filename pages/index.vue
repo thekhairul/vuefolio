@@ -1,5 +1,5 @@
 <template>
-  <main id="profile" class="flex-grow border h-full shadow-lg"></main>
+  <div id="profile">I am Index</div>
 </template>
 
 <script>

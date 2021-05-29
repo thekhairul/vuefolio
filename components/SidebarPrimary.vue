@@ -1,9 +1,12 @@
 <template>
   <aside
     id="menubar"
-    class="shadow-lg h-full w-16 flex flex-col justify-between"
+    class="shadow-inner h-full w-16 flex flex-col justify-between relative z-20 bg-white"
   >
-    <button class="w-16 h-16 bg-blue-500 hover:bg-blue-600">
+    <button
+      class="w-16 h-16 bg-blue-500 hover:bg-blue-600"
+      @click="handleSidebar"
+    >
       <fa :icon="['fas', 'bars']" class="text-white text-2xl" />
     </button>
 
@@ -74,6 +77,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    handleSidebar() {
+      this.$store.commit('toggleSidebar');
+    },
   },
 };
 </script>

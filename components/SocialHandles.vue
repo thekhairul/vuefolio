@@ -29,9 +29,9 @@ export default {
           icon: 'github',
         },
         {
-          name: 'twitter',
+          name: 'medium',
           url: 'https://www.facebook.com/khairulislam.anik.77',
-          icon: 'twitter',
+          icon: 'medium',
         },
       ],
     };

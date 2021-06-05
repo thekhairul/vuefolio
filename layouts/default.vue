@@ -52,8 +52,8 @@ export default {
 
 <style lang="scss">
 .app-body {
-  transition: margin 0.5s ease-in;
-  margin-left: 1rem;
+  transition: margin 0.5s ease-in-out;
+  margin-left: 12px;
   &.sidebar-open {
     margin-left: 276px;
   }

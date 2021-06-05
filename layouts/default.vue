@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="container flex h-screen md:py-6 mx-auto relative overflow-x-hidden"
-  >
+  <div class="container flex h-screen mx-auto relative overflow-x-hidden">
     <sidebar-primary />
     <transition
       :css="false"
@@ -11,7 +9,10 @@
     >
       <sidebar-secondary v-show="sidebarOpen" />
     </transition>
-    <main class="flex-grow border h-full ml-4 shadow-lg">
+    <main
+      class="app-body flex-grow border h-full shadow-lg"
+      :class="{ 'sidebar-open': sidebarOpen }"
+    >
       <Nuxt />
     </main>
   </div>
@@ -49,4 +50,12 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.app-body {
+  transition: margin 0.5s ease-in;
+  margin-left: 1rem;
+  &.sidebar-open {
+    margin-left: 276px;
+  }
+}
+</style>

@@ -1,7 +1,7 @@
 <template>
   <aside
     id="intro"
-    class="flex flex-col h-full w-64 ml-4 shadow-lg relative z-10"
+    class="sidebar flex flex-col h-full w-64 border shadow-lg relative z-10"
   >
     <div class="text-center p-4 border-b mb-4">
       <img
@@ -86,4 +86,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+#intro.sidebar {
+  position: absolute;
+  margin-left: 74px;
+  bottom: 0;
+  top: 0;
+}
+</style>

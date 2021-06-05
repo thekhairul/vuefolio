@@ -1,12 +1,19 @@
 <template>
   <aside
     id="menubar"
-    class="shadow-inner h-full w-16 flex flex-col justify-between relative z-20 bg-white"
+    class="
+      shadow-inner
+      border
+      h-full
+      w-16
+      flex flex-col
+      justify-between
+      relative
+      z-20
+      bg-white
+    "
   >
-    <button
-      class="w-16 h-16 bg-blue-500 hover:bg-blue-600"
-      @click="handleSidebar"
-    >
+    <button class="h-16 bg-blue-500 hover:bg-blue-600" @click="handleSidebar">
       <fa :icon="['fas', 'bars']" class="text-white text-2xl" />
     </button>
 
@@ -19,7 +26,12 @@
         >
           <NuxtLink
             :to="item.route"
-            class="flex justify-center text-2xl text-gray-500 hover:text-blue-600"
+            class="
+              flex
+              justify-center
+              text-2xl text-gray-500
+              hover:text-blue-600
+            "
             :data-tooltip="item.title"
             exact-active-class="nuxt-link-exact-active text-blue-600"
             ><component :is="item.icon" class="fill-current"></component

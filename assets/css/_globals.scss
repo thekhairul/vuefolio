@@ -3,6 +3,8 @@
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     max-height: 100vh;
+    background-image: url("~/assets/images/bodyBG.jpg");
+    background-size: contain;
   }
   .container {
     height: calc(100vh - 3rem);

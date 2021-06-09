@@ -2,8 +2,7 @@
   <aside
     id="menubar"
     class="
-      shadow-inner
-      border
+      shadow-lg
       h-full
       w-16
       flex flex-col
@@ -13,7 +12,7 @@
       bg-white
     "
   >
-    <button class="h-16 bg-blue-500 hover:bg-blue-600" @click="handleSidebar">
+    <button class="h-16 bg-green-500 hover:bg-green-600" @click="handleSidebar">
       <fa :icon="['fas', 'bars']" class="text-white text-2xl" />
     </button>
 
@@ -30,10 +29,10 @@
               flex
               justify-center
               text-2xl text-gray-500
-              hover:text-blue-600
+              hover:text-green-600
             "
             :data-tooltip="item.title"
-            exact-active-class="nuxt-link-exact-active text-blue-600"
+            exact-active-class="nuxt-link-exact-active text-green-600"
             ><component :is="item.icon" class="fill-current"></component
           ></NuxtLink>
         </li>
@@ -43,7 +42,7 @@
     <button class="w-16 h-16 border-t" data-tooltip="Download Resume">
       <fa
         :icon="['fas', 'cloud-download-alt']"
-        class="text-blue-500 text-2xl"
+        class="text-green-500 text-2xl"
       />
     </button>
   </aside>

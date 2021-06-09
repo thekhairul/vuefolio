@@ -1,8 +1,5 @@
 <template>
-  <aside
-    id="intro"
-    class="sidebar flex flex-col h-full w-64 border shadow-lg relative z-10"
-  >
+  <aside id="intro" class="sidebar flex flex-col h-full">
     <div class="text-center p-4 border-b mb-4">
       <img
         src="~/assets/images/thekhairul.jpg"
@@ -17,7 +14,7 @@
     </div>
 
     <div class="flex flex-col h-full justify-between max-h-full">
-      <div class="flex-grow overflow-y-auto">
+      <div class="flex-grow">
         <div class="px-4 mb-4">
           <h4 class="font-extralight">
             <b class="font-medium">Residence:</b> Bangladesh
@@ -44,8 +41,8 @@
             :radius="25"
             :progress="75"
             :stroke="4"
-            stroke-color="rgba(37, 99, 235, 1)"
-            fill-color="rgba(59, 130, 246, 1)"
+            stroke-color="rgba(16, 185, 129, 1)"
+            fill-color="rgba(16, 185, 129, 0.7)"
             label="En"
           />
         </div>
@@ -57,8 +54,8 @@
             :radius="25"
             :progress="100"
             :stroke="4"
-            stroke-color="rgba(37, 99, 235, 1)"
-            fill-color="rgba(59, 130, 246, 1)"
+            stroke-color="rgba(16, 185, 129, 1)"
+            fill-color="rgba(16, 185, 129, 0.7)"
             label="Bn"
           />
         </div>
@@ -70,8 +67,8 @@
             :radius="25"
             :progress="50"
             :stroke="4"
-            stroke-color="rgba(37, 99, 235, 1)"
-            fill-color="rgba(59, 130, 246, 1)"
+            stroke-color="rgba(16, 185, 129, 1)"
+            fill-color="rgba(16, 185, 129, 0.7)"
             label="Hn"
           />
         </div>
@@ -86,11 +83,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-#intro.sidebar {
-  position: absolute;
-  margin-left: 74px;
-  bottom: 0;
-  top: 0;
-}
-</style>
+<style lang="scss"></style>

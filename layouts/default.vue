@@ -1,16 +1,28 @@
 <template>
-  <div class="container flex h-screen mx-auto relative overflow-x-hidden">
+  <div class="container flex h-screen mx-auto relative">
     <sidebar-primary />
-    <transition
-      :css="false"
-      mode="out-in"
-      @enter="enterElement"
-      @leave="leaveElement"
+    <div
+      class="
+        overflow-x-hidden
+        sidebar-wrapper
+        h-full
+        w-64
+        bg-white
+        absolute
+        z-10
+      "
     >
-      <sidebar-secondary v-show="sidebarOpen" />
-    </transition>
+      <transition
+        :css="false"
+        mode="out-in"
+        @enter="enterElement"
+        @leave="leaveElement"
+      >
+        <sidebar-secondary v-show="sidebarOpen" />
+      </transition>
+    </div>
     <main
-      class="app-body flex-grow border h-full shadow-lg"
+      class="app-body flex-grow bg-white h-full shadow-lg relative z-10"
       :class="{ 'sidebar-open': sidebarOpen }"
     >
       <Nuxt />
@@ -30,7 +42,6 @@ export default {
       this.$anime({
         targets: el,
         translateX: ['-100%', 0],
-        opacity: [0, 1],
         easing: 'easeInOutSine',
         duration: 500,
         complete: done,
@@ -40,7 +51,6 @@ export default {
       this.$anime({
         targets: el,
         translateX: [0, '-100%'],
-        opacity: [1, 0],
         easing: 'easeInOutSine',
         duration: 500,
         complete: done,
@@ -51,11 +61,19 @@ export default {
 </script>
 
 <style lang="scss">
+.sidebar-wrapper {
+  margin-left: 64px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
 .app-body {
   transition: margin 0.5s ease-in-out;
-  margin-left: 12px;
+  margin-left: 0px;
   &.sidebar-open {
-    margin-left: 276px;
+    margin-left: 256px;
   }
 }
 </style>

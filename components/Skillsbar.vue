@@ -9,7 +9,7 @@
             style="top: 50%; margin-top: -1px"
           ></div>
           <div
-            class="absolute h-0.5 bg-blue-500"
+            class="absolute h-0.5 bg-green-500"
             :style="
               `width: ${getSkillbarWidth(
                 skill.phase
@@ -21,6 +21,7 @@
             :key="id"
             :style="getSkillPhaseStyle(phase, skill.phase)"
             class="rounded-full inline-block"
+            :data-tooltip="phase"
           ></span>
         </div>
       </li>
@@ -41,7 +42,7 @@ export default {
         },
         {
           name: 'Vue',
-          phase: 'Advanced',
+          phase: 'Expert',
         },
         {
           name: 'React',
@@ -71,7 +72,7 @@ export default {
       );
       const color =
         phaseIndex <= currentPhaseIndex
-          ? 'rgba(59, 130, 246, 1)'
+          ? 'rgba(16, 185, 129, 1)'
           : 'rgba(107, 114, 128, 1)';
       const width = phaseIndex === currentPhaseIndex ? '12px' : '0px';
       const height = width;

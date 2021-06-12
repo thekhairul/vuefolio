@@ -3,7 +3,12 @@
     <li v-for="(media, idx) in socialMedias" :key="idx" class="p-2">
       <a
         :href="media.url"
-        class="text-green-500 hover:text-green-600 text-2xl"
+        class="
+          text-accent-dark
+          dark:text-accent-dark
+          hover:text-green-600
+          text-2xl
+        "
         target="_blank"
         :data-tooltip="media.name"
       >

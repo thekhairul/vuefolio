@@ -9,7 +9,8 @@
       justify-between
       relative
       z-20
-      bg-white
+      bg-background-light
+      dark:bg-background-dark
     "
   >
     <button class="h-16 bg-green-500 hover:bg-green-600" @click="handleSidebar">
@@ -28,18 +29,21 @@
             class="
               flex
               justify-center
-              text-2xl text-gray-500
+              text-2xl text-color-light
+              dark:text-color-dark
               hover:text-green-600
             "
             :data-tooltip="item.title"
-            exact-active-class="nuxt-link-exact-active text-green-600"
             ><component :is="item.icon" class="fill-current"></component
           ></NuxtLink>
         </li>
       </ul>
     </nav>
 
-    <button class="w-16 h-16 border-t" data-tooltip="Download Resume">
+    <button
+      class="w-16 h-16 border-t dark:border-gray-500"
+      data-tooltip="Download Resume"
+    >
       <fa
         :icon="['fas', 'cloud-download-alt']"
         class="text-green-500 text-2xl"

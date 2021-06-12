@@ -7,7 +7,8 @@
         sidebar-wrapper
         h-full
         w-64
-        bg-white
+        bg-background-light
+        dark:bg-background-dark
         absolute
         z-10
       "
@@ -22,7 +23,16 @@
       </transition>
     </div>
     <main
-      class="app-body flex-grow bg-white h-full shadow-lg relative z-10"
+      class="
+        app-body
+        flex-grow
+        bg-background-light
+        dark:bg-background-dark
+        h-full
+        shadow-lg
+        relative
+        z-10
+      "
       :class="{ 'sidebar-open': sidebarOpen }"
     >
       <Nuxt />

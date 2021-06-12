@@ -12,4 +12,24 @@ a,
 span,
 button {
   font-family: 'Poppins', 'sans-serif';
+  color: var(--color-light);
+}
+
+.dark {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  span,
+  button {
+    color: var(--color-dark);
+  }
+}
+
+.nuxt-link-exact-active {
+  color: var(--accent-dark) !important;
 }

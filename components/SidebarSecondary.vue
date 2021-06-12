@@ -1,6 +1,15 @@
 <template>
-  <aside id="intro" class="sidebar flex flex-col h-full">
-    <div class="text-center p-4 border-b mb-4">
+  <aside
+    id="intro"
+    class="
+      sidebar
+      flex flex-col
+      h-full
+      bg-background-light
+      dark:bg-background-dark
+    "
+  >
+    <div class="text-center p-4 border-b dark:border-gray-500 mb-4">
       <img
         src="~/assets/images/thekhairul.jpg"
         alt=""
@@ -26,35 +35,49 @@
             <b class="font-medium">Age:</b>
             {{ new Date().getFullYear() - 1992 }}
           </h4>
-          <hr class="mt-4" />
+          <hr class="mt-4 dark:border-gray-500" />
         </div>
 
         <skillsbar />
       </div>
 
-      <div class="flex border-t h-16">
+      <div class="flex border-t dark:border-gray-500 h-16">
         <div
-          class="en flex-1 flex flex-col justify-center items-center border-r"
+          class="
+            en
+            flex-1 flex flex-col
+            justify-center
+            items-center
+            border-r
+            dark:border-gray-500
+          "
           data-tooltip="English"
         >
           <progress-ring
             :radius="25"
             :progress="75"
             :stroke="4"
-            stroke-color="rgba(16, 185, 129, 1)"
+            stroke-color="var(--accent-dark)"
             fill-color="rgba(16, 185, 129, 0.7)"
             label="En"
           />
         </div>
         <div
-          class="bn flex-1 flex justify-center items-center border-r"
+          class="
+            bn
+            flex-1 flex
+            justify-center
+            items-center
+            border-r
+            dark:border-gray-500
+          "
           data-tooltip="Bangla"
         >
           <progress-ring
             :radius="25"
             :progress="100"
             :stroke="4"
-            stroke-color="rgba(16, 185, 129, 1)"
+            stroke-color="var(--accent-dark)"
             fill-color="rgba(16, 185, 129, 0.7)"
             label="Bn"
           />
@@ -67,7 +90,7 @@
             :radius="25"
             :progress="50"
             :stroke="4"
-            stroke-color="rgba(16, 185, 129, 1)"
+            stroke-color="var(--accent-dark)"
             fill-color="rgba(16, 185, 129, 0.7)"
             label="Hn"
           />

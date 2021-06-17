@@ -103,6 +103,11 @@
 <script>
 export default {
   name: 'SidebarSecondary',
+  mounted() {
+    if (window.innerWidth < 550) {
+      this.$store.commit('toggleSidebar');
+    }
+  },
 };
 </script>
 

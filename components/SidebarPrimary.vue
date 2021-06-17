@@ -13,8 +13,33 @@
       dark:bg-background-dark
     "
   >
-    <button class="h-16 bg-green-500 hover:bg-green-600" @click="handleSidebar">
-      <fa :icon="['fas', 'bars']" class="text-white text-2xl" />
+    <button
+      id="sidebar-toggler"
+      class="
+        bg-gradient-to-br bg-green-600
+        flex flex-col
+        from-green-400
+        h-16
+        items-center
+        justify-center
+        to-cyan-500
+      "
+      :class="{ active: sidebarOpen }"
+      @click="handleSidebar"
+    >
+      <!-- <fa
+        v-show="sidebarOpen"
+        :icon="['fas', 'arrow-left']"
+        class="text-white text-2xl"
+      />
+      <fa
+        v-show="!sidebarOpen"
+        :icon="['fas', 'bars']"
+        class="text-white text-2xl"
+      /> -->
+      <span class="bar bar-1"></span>
+      <span class="bar bar-2"></span>
+      <span class="bar bar-3"></span>
     </button>
 
     <nav>
@@ -93,6 +118,11 @@ export default {
       ],
     };
   },
+  computed: {
+    sidebarOpen() {
+      return this.$store.state.isSidebarOpen;
+    },
+  },
   methods: {
     handleSidebar() {
       this.$store.commit('toggleSidebar');
@@ -101,4 +131,38 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+#sidebar-toggler {
+  position: relative;
+  .bar {
+    display: block;
+    height: 2px;
+    width: 35px;
+    background: white;
+    border-radius: 5px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  &:not(.active) {
+    &:hover .bar {
+      margin-bottom: 6px;
+    }
+    .bar {
+      transition: margin-bottom 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  }
+  &.active {
+    .bar-1 {
+      position: absolute;
+      transform: translateX(-8px) translateY(-9px) rotateZ(-45deg);
+      width: 25px;
+    }
+    .bar-3 {
+      position: absolute;
+      transform: translateX(-8px) translateY(9px) rotateZ(45deg);
+      width: 25px;
+    }
+  }
+}
+</style>

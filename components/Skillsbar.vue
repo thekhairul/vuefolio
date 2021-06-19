@@ -74,7 +74,7 @@ export default {
         phaseIndex <= currentPhaseIndex
           ? 'rgba(16, 185, 129, 1)'
           : 'rgba(107, 114, 128, 1)';
-      const width = phaseIndex === currentPhaseIndex ? '12px' : '0px';
+      const width = phaseIndex === currentPhaseIndex ? '12px' : '6px';
       const height = width;
       const left = (100 / this.skillPhases.length) * (phaseIndex + 1);
       return {
@@ -85,6 +85,7 @@ export default {
         top: '50%',
         left: `${left}%`,
         transform: `translate(-${width}, -50%)`,
+        display: phaseIndex !== currentPhaseIndex ? 'none' : 'unset',
       };
     },
     getSkillbarWidth(currentPhase) {

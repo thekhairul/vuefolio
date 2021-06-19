@@ -11,6 +11,7 @@
   >
     <div class="text-center p-4 border-b dark:border-gray-500 mb-4">
       <img
+        ref="avatar"
         src="~/assets/images/thekhairul.jpg"
         alt=""
         class="w-40 h-40 border rounded-full my-4 mx-auto"
@@ -101,12 +102,15 @@
 </template>
 
 <script>
+import VanillaTilt from 'vanilla-tilt';
+
 export default {
   name: 'SidebarSecondary',
   mounted() {
-    if (window.innerWidth < 550) {
-      this.$store.commit('toggleSidebar');
+    if (window.innerWidth > 550) {
+      this.$store.commit('toggleSidebar', true);
     }
+    VanillaTilt.init(this.$refs.avatar, { scale: 1.2 });
   },
 };
 </script>

@@ -27,16 +27,6 @@
       :class="{ active: sidebarOpen }"
       @click="handleSidebar"
     >
-      <!-- <fa
-        v-show="sidebarOpen"
-        :icon="['fas', 'arrow-left']"
-        class="text-white text-2xl"
-      />
-      <fa
-        v-show="!sidebarOpen"
-        :icon="['fas', 'bars']"
-        class="text-white text-2xl"
-      /> -->
       <span class="bar bar-1"></span>
       <span class="bar bar-2"></span>
       <span class="bar bar-3"></span>
@@ -125,7 +115,7 @@ export default {
   },
   methods: {
     handleSidebar() {
-      this.$store.commit('toggleSidebar');
+      this.$store.commit('toggleSidebar', !this.sidebarOpen);
     },
   },
 };

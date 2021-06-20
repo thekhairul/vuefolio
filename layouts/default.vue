@@ -32,6 +32,7 @@
         shadow-lg
         relative
         z-10
+        overflow-y-auto
       "
       :class="{ 'sidebar-open': sidebarOpen }"
     >

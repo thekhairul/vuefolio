@@ -4,29 +4,34 @@
       <img
         src="~/assets/images/homeHeaderBG.jpg"
         alt=""
-        class="h-80 object-center object-cover w-full"
+        class="home-header__banner h-80 object-center object-cover w-full"
       />
       <h2
         ref="headerText"
         class="home-header__text text-6xl font-bold absolute"
       >
-        <span class="anim-letter inline-block text-white transform scale-0"
-          >H</span
-        >
-        <span class="anim-letter inline-block text-white transform scale-0"
-          >O</span
-        >
-        <span class="anim-letter inline-block text-white transform scale-0"
-          >L</span
-        >
-        <span class="anim-letter inline-block text-white transform scale-0"
-          >A</span
-        >
-        <span
-          class="anim-letter--bang inline-block text-white transform scale-0"
-          >!</span
-        >
+        <span class="anim-letter">H</span>
+        <span class="anim-letter">O</span>
+        <span class="anim-letter">L</span>
+        <span class="anim-letter">A</span>
+        <span class="anim-letter--bang">!</span>
       </h2>
+    </div>
+    <div class="home-main p-5">
+      <div class="about mb-4">
+        <h2 class="text-color-light font-semibold text-2xl mb-3">about</h2>
+        <p class="text-color-light">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+          voluptatibus animi quisquam dolore veritatis minima nam tenetur earum
+          a laborum quo, adipisci laboriosam accusantium vitae vero alias.
+        </p>
+      </div>
+
+      <div class="service mb-4">
+        <h2 class="text-color-light font-semibold text-2xl mb-3">
+          my services
+        </h2>
+      </div>
     </div>
   </div>
 </template>
@@ -55,7 +60,7 @@ export default {
           rotateZ: [45, 15],
           duration: 600,
         });
-    }, 1000);
+    }, 500);
   },
 };
 </script>
@@ -67,8 +72,18 @@ export default {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-    text-shadow: -3px 3px 5px #312f2f;
+    text-shadow: -10px 3px 5px #151617;
     letter-spacing: 0.2rem;
+    transition: letter-spacing 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    &:hover {
+      letter-spacing: 0.5rem;
+    }
+  }
+  .anim-letter,
+  .anim-letter--bang {
+    display: inline-block;
+    color: var(--color-dark);
+    transform: scale(0);
   }
 }
 </style>

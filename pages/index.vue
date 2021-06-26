@@ -31,6 +31,7 @@
         <h2 class="text-color-light font-semibold text-2xl mb-3">
           my services
         </h2>
+        <services></services>
       </div>
     </div>
   </div>

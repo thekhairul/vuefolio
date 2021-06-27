@@ -1,28 +1,19 @@
 <template>
   <div v-swiper="swiperOption">
     <div class="swiper-wrapper py-2">
-      <div class="swiper-slide p-4 rounded shadow-md flex items-center">
-        <spa-icon class="w-14 h-14"></spa-icon>
-        <h2 class="text-color-light text-xl ml-4">Single Page Application</h2>
+      <div
+        v-for="(slide, idx) in swiperSlides"
+        :key="idx"
+        class="swiper-slide opacity-0"
+      >
+        <div class="p-4 rounded bg-gray-50 shadow-md flex items-center">
+          <component :is="slide.icon" class="w-16 h-16"></component>
+          <h2 class="text-color-light text-lg ml-4">{{ slide.title }}</h2>
+        </div>
       </div>
-      <div class="swiper-slide p-4 rounded shadow-md flex items-center">
-        <rwd-icon class="w-14 h-14"></rwd-icon>
-        <h2 class="text-color-light text-xl ml-4">Responsive Web Design</h2>
-      </div>
-      <div class="swiper-slide p-4 rounded shadow-md flex items-center">
-        <psd-icon class="w-14 h-14"></psd-icon>
-      </div>
-      <div class="swiper-slide p-4 rounded shadow-md flex items-center">
-        <shopify-icon class="w-14 h-14"></shopify-icon>
-      </div>
-      <div class="swiper-slide p-4 rounded shadow-md flex items-center">
-        <api-icon class="w-14 h-14"></api-icon>
-      </div>
-      <div class="swiper-slide p-4 rounded shadow-md flex items-center">
-        <ecommerce-icon class="w-14 h-14"></ecommerce-icon>
-      </div>
-      <div class="swiper-pagination"></div>
     </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
 </template>
 
@@ -42,27 +33,59 @@ export default {
     PsdIcon,
     ShopifyIcon,
     ApiIcon,
-    EcommerceIcon,
+    EcommerceIcon
   },
   data() {
+    const vue = this;
     return {
       swiperOption: {
         slidesPerView: 4,
         spaceBetween: 10,
-        slidesPerGroup: 3,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
         navigation: {
           nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          prevEl: '.swiper-button-prev'
         },
+        on: {
+          init() {
+            vue.$anime({
+              targets: '.swiper-slide',
+              translateY: [40, 0],
+              opacity: [0, 1],
+              easing: 'easeInOutSine',
+              duration: 600,
+              delay: vue.$anime.stagger(200)
+            });
+          }
+        }
       },
+      swiperSlides: [
+        {
+          icon: 'spa-icon',
+          title: 'Single Page Application'
+        },
+        {
+          icon: 'rwd-icon',
+          title: 'Responsive Web Design'
+        },
+        {
+          icon: 'psd-icon',
+          title: 'PSD/Figma/XD to HTML'
+        },
+        {
+          icon: 'shopify-icon',
+          title: 'Shopify Storefront Theme'
+        },
+        {
+          icon: 'api-icon',
+          title: 'API integration'
+        },
+        {
+          icon: 'ecommerce-icon',
+          title: 'Ecommerce Storefront'
+        }
+      ]
     };
-  },
+  }
 };
 </script>
 

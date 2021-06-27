@@ -46,7 +46,7 @@ export default {
   computed: {
     sidebarOpen() {
       return this.$store.state.isSidebarOpen;
-    },
+    }
   },
   methods: {
     enterElement(el, done) {
@@ -55,7 +55,7 @@ export default {
         translateX: ['-100%', 0],
         easing: 'easeInOutSine',
         duration: 500,
-        complete: done,
+        complete: done
       });
     },
     leaveElement(el, done) {
@@ -64,10 +64,10 @@ export default {
         translateX: [0, '-100%'],
         easing: 'easeInOutSine',
         duration: 500,
-        complete: done,
+        complete: done
       });
-    },
-  },
+    }
+  }
 };
 </script>
 

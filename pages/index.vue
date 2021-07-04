@@ -27,19 +27,25 @@
         </p>
       </div>
 
-      <div class="service mb-4">
+      <div class="service mb-8">
         <h2 class="text-color-light font-semibold text-2xl mb-3">
           my services
         </h2>
-        <services></services>
+        <services />
+      </div>
+
+      <div class="pricing mb-4">
+        <pricing />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Pricing from '~/components/Pricing.vue';
 export default {
   name: 'Index',
+  components: { Pricing },
   mounted() {
     const letters = this.$refs.headerText.querySelectorAll('.anim-letter');
     const bang = this.$refs.headerText.querySelector('.anim-letter--bang');
@@ -75,7 +81,7 @@ export default {
     z-index: 10;
     text-shadow: -10px 3px 5px #151617;
     letter-spacing: 0.2rem;
-    transition: letter-spacing 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: letter-spacing 0.3s var(--easing-function);
     &:hover {
       letter-spacing: 0.5rem;
     }

@@ -1,12 +1,14 @@
 <template>
   <div v-swiper="swiperOption">
-    <div class="swiper-wrapper py-2">
+    <div class="swiper-wrapper py-2 px-1">
       <div
         v-for="(slide, idx) in swiperSlides"
         :key="idx"
         class="swiper-slide opacity-0"
       >
-        <div class="p-4 rounded bg-gray-50 shadow-md flex items-center">
+        <div
+          class="service-card p-4 rounded bg-gray-50 dark:bg-background-dark shadow-md flex items-center"
+        >
           <component :is="slide.icon" class="w-16 h-16"></component>
           <h2 class="text-color-light text-lg ml-4">{{ slide.title }}</h2>
         </div>
@@ -89,4 +91,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.service-card {
+  transition: transform 0.3s var(--easing-function);
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+</style>

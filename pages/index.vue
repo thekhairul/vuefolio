@@ -1,34 +1,34 @@
 <template>
   <div id="home" class="home">
-    <div class="home-header relative max-h-96 hidden md:block">
-      <img
+    <div
+      class="home-header relative h-80 max-h-80 flex items-center justify-center bg-background-dark p-5"
+    >
+      <!-- <img
         src="~/assets/images/homeHeaderBG.jpg"
         alt=""
         class="home-header__banner h-80 object-center object-cover w-full"
-      />
-      <h2
-        ref="headerText"
-        class="home-header__text text-6xl font-bold absolute"
-      >
-        <span class="anim-letter">H</span>
-        <span class="anim-letter">O</span>
-        <span class="anim-letter">L</span>
-        <span class="anim-letter">A</span>
-        <span class="anim-letter--bang">!</span>
-      </h2>
-    </div>
-    <div class="home-main p-5">
-      <div class="about mb-4">
-        <h2 class="text-color-light font-semibold text-2xl mb-3">about</h2>
-        <p class="text-color-light">
+      /> -->
+      <div class="home-header__brief w-full lg:w-1/2">
+        <h2 ref="headerText" class="home-header__text text-6xl mb-2 font-bold">
+          <span class="anim-letter">H</span>
+          <span class="anim-letter">O</span>
+          <span class="anim-letter">L</span>
+          <span class="anim-letter">A</span>
+          <span class="anim-letter--bang">!</span>
+        </h2>
+        <p
+          ref="headerPara"
+          class="text-white font-light tracking-widest anim-para opacity-0"
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
           voluptatibus animi quisquam dolore veritatis minima nam tenetur earum
           a laborum quo, adipisci laboriosam accusantium vitae vero alias.
         </p>
       </div>
-
+    </div>
+    <div class="home-main p-5">
       <div class="service mb-8">
-        <h2 class="text-color-light font-semibold text-2xl mb-3">
+        <h2 class="text-accent-light font-semibold text-2xl mb-3">
           my services
         </h2>
         <services />
@@ -49,11 +49,11 @@ export default {
   mounted() {
     const letters = this.$refs.headerText.querySelectorAll('.anim-letter');
     const bang = this.$refs.headerText.querySelector('.anim-letter--bang');
+    const para = this.$refs.headerPara;
     setTimeout(() => {
       this.$anime
         .timeline({
-          easing: 'easeInOutSine',
-          duration: 500
+          easing: 'easeInOutSine'
         })
         .add({
           targets: letters,
@@ -66,6 +66,11 @@ export default {
           scale: [0, 1],
           rotateZ: [45, 15],
           duration: 600
+        })
+        .add({
+          targets: para,
+          opacity: [0, 1],
+          duration: 600
         });
     }, 500);
   }
@@ -75,11 +80,7 @@ export default {
 <style lang="scss">
 .home-header {
   &__text {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    text-shadow: -10px 3px 5px #151617;
+    text-shadow: -5px 2px 0px #11b981;
     letter-spacing: 0.2rem;
     transition: letter-spacing 0.3s var(--easing-function);
     &:hover {

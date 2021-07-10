@@ -108,10 +108,10 @@ export default {
   name: 'SidebarSecondary',
   mounted() {
     if (window.innerWidth > 550) {
-      this.$store.commit('toggleSidebar', true);
+      // this.$store.commit('toggleSidebar', true);
     }
     VanillaTilt.init(this.$refs.avatar, { scale: 1.2 });
-  },
+  }
 };
 </script>
 

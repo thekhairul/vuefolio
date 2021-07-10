@@ -7,15 +7,26 @@
         class="swiper-slide opacity-0"
       >
         <div
-          class="service-card p-4 rounded bg-gray-50 dark:bg-background-dark shadow-md flex items-center"
+          class="service-card p-4 rounded-xl bg-gray-50 dark:bg-background-dark shadow flex flex-col items-center justify-center"
         >
-          <component :is="slide.icon" class="w-16 h-16"></component>
-          <h2 class="text-color-light text-lg ml-4">{{ slide.title }}</h2>
+          <component :is="slide.icon" class="w-16 h-16 mb-2"></component>
+          <h2
+            class="text-color-light text-center text-sm font-semibold ml-4 tracking-widest"
+          >
+            {{ slide.title }}
+          </h2>
         </div>
       </div>
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev">
+      <fa :icon="['fas', 'arrow-circle-left']" class="text-gray-400 text-2xl" />
+    </div>
+    <div class="swiper-button-next">
+      <fa
+        :icon="['fas', 'arrow-circle-right']"
+        class="text-gray-400 text-2xl"
+      />
+    </div>
   </div>
 </template>
 
@@ -41,8 +52,18 @@ export default {
     const vue = this;
     return {
       swiperOption: {
-        slidesPerView: 4,
-        spaceBetween: 10,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        breakpoints: {
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 2
+          },
+          // when window width is >= 992px
+          992: {
+            slidesPerView: 4
+          }
+        },
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'
@@ -92,10 +113,24 @@ export default {
 </script>
 
 <style lang="scss">
-.service-card {
-  transition: transform 0.3s var(--easing-function);
-  &:hover {
-    transform: translateY(-10px);
-  }
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  z-index: 99;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 99;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.swiper-button-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 </style>

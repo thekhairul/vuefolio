@@ -37,6 +37,13 @@
       <div class="pricing mb-4">
         <pricing />
       </div>
+
+      <div class="service mb-8">
+        <h2 class="text-accent-light font-semibold text-2xl mb-3">
+          recommendation
+        </h2>
+        <testimonial />
+      </div>
     </div>
   </div>
 </template>

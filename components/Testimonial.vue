@@ -1,22 +1,31 @@
 <template>
   <div v-swiper="swiperOption">
-    <div class="swiper-wrapper py-2 px-1">
+    <div class="swiper-wrapper py-2">
       <div
         v-for="(voucher, idx) in testimonials"
         :key="idx"
-        class="swiper-slide opacity-0"
+        class="swiper-slide opacity-0 px-1"
       >
         <div
-          class="testimonial-card p-4 rounded-xl bg-gray-50 dark:bg-background-dark shadow flex flex-col items-center justify-center"
+          class="testimonial-card p-8 rounded-xl bg-gray-50 dark:bg-background-dark shadow relative flex flex-col items-center justify-center"
         >
-          <figure class="bg-gray-50 rounded-full w-24 h-24">
+          <fa
+            :icon="['fas', 'quote-left']"
+            class="testimonial-quote text-gray-400 text-4xl opacity-50 absolute"
+          />
+          <figure class="bg-gray-50 rounded-full w-20 h-20">
             <img :src="require(`~/assets/images/${voucher.avatar}`)" alt="" />
           </figure>
-          <p class="text-2xl">{{ voucher.msg }}</p>
-          <a :href="`mailto:${voucher.email}`">{{ voucher.name }}</a>
-          <p>
+          <p class="text-md p-2 text-center">{{ voucher.msg }}</p>
+          <a
+            :href="`mailto:${voucher.email}`"
+            class="text-lg italic font-semibold"
+          >
+            {{ voucher.name }},</a
+          >
+          <p class="font-light tracking-widest text-center">
             <span>{{ voucher.designation }},</span>
-            <span>{{ voucher.company }}</span>
+            <span class="font-semibold">{{ voucher.company }}</span>
           </p>
         </div>
       </div>
@@ -42,6 +51,8 @@ export default {
       swiperOption: {
         slidesPerView: 1,
         spaceBetween: 20,
+        autoplay: true,
+        loop: true,
         breakpoints: {
           // when window width is >= 640px
           640: {
@@ -99,4 +110,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.testimonial-quote {
+  top: -10px;
+  left: 50px;
+}
+</style>

@@ -25,6 +25,14 @@
           a laborum quo, adipisci laboriosam accusantium vitae vero alias.
         </p>
       </div>
+      <figure class="home-avatar hidden lg:block">
+        <img
+          ref="homeAvatar"
+          :src="require(`~/assets/images/avatar.png`)"
+          alt=""
+          class="w-36 h-36 mx-2 rounded-full object-cover object-right"
+        />
+      </figure>
     </div>
     <div class="home-main p-5">
       <div class="service mb-8">
@@ -49,6 +57,8 @@
 </template>
 
 <script>
+import VanillaTilt from 'vanilla-tilt';
+
 import Pricing from '~/components/Pricing.vue';
 export default {
   name: 'Index',
@@ -80,6 +90,8 @@ export default {
           duration: 600
         });
     }, 500);
+
+    VanillaTilt.init(this.$refs.homeAvatar, { scale: 1.2 });
   }
 };
 </script>
@@ -99,6 +111,11 @@ export default {
     display: inline-block;
     color: var(--color-dark);
     transform: scale(0);
+  }
+}
+.home-avatar {
+  img {
+    filter: drop-shadow(3px 6px 6px #2d2323) grayscale(1);
   }
 }
 </style>

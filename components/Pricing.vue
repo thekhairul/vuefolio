@@ -66,19 +66,19 @@ export default {
         {
           thumb: 'progress-icon',
           type: 'Basic',
-          price: 25,
+          price: 15,
           featureIds: [0, 1]
         },
         {
           thumb: 'project-icon',
           type: 'Pro',
-          price: 35,
+          price: 25,
           featureIds: [0, 1, 2, 3]
         },
         {
           thumb: 'money-icon',
           type: 'Advanced',
-          price: 50,
+          price: 35,
           featureIds: [0, 1, 2, 3, 4, 5, 6]
         }
       ]

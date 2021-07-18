@@ -1,17 +1,17 @@
 <template>
   <div v-swiper="swiperOption">
-    <div class="swiper-wrapper py-2 px-1">
+    <div class="swiper-wrapper py-2">
       <div
         v-for="(slide, idx) in swiperSlides"
         :key="idx"
-        class="swiper-slide opacity-0"
+        class="swiper-slide opacity-0 px-1"
       >
         <div
           class="service-card p-4 rounded-xl bg-gray-50 dark:bg-background-dark shadow flex flex-col items-center justify-center"
         >
           <component :is="slide.icon" class="w-16 h-16 mb-2"></component>
           <h2
-            class="text-color-light text-center text-sm font-semibold ml-4 tracking-widest"
+            class="text-color-light text-center text-sm font-semibold tracking-widest"
           >
             {{ slide.title }}
           </h2>
@@ -52,7 +52,7 @@ export default {
     const vue = this;
     return {
       swiperOption: {
-        slidesPerView: 1,
+        slidesPerView: 1.3,
         spaceBetween: 20,
         breakpoints: {
           // when window width is >= 640px

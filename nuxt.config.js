@@ -63,7 +63,8 @@ export default {
               'faCloudDownloadAlt',
               'faArrowLeft',
               'faArrowCircleRight',
-              'faArrowCircleLeft'
+              'faArrowCircleLeft',
+              'faQuoteLeft'
             ]
           },
           {

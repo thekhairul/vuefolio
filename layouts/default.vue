@@ -1,5 +1,5 @@
 <template>
-  <div class="container flex h-screen mx-auto relative">
+  <div class="container flex h-screen mx-auto overflow-x-hidden relative">
     <sidebar-primary />
     <div
       class="
@@ -83,6 +83,7 @@ export default {
 .app-body {
   transition: margin 0.5s ease-in-out;
   margin-left: 0px;
+  min-width: 300px;
   &.sidebar-open {
     margin-left: 256px;
   }

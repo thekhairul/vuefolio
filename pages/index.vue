@@ -1,15 +1,21 @@
 <template>
   <div id="home" class="home">
     <div
-      class="home-header relative h-80 max-h-80 flex items-center justify-center bg-background-dark p-5"
+      class="home-header relative h-80 max-h-80 flex flex-wrap items-center justify-center bg-background-dark p-5"
     >
-      <!-- <img
-        src="~/assets/images/homeHeaderBG.jpg"
-        alt=""
-        class="home-header__banner h-80 object-center object-cover w-full"
-      /> -->
+      <figure class="home-avatar my-2 lg:order-1">
+        <img
+          ref="homeAvatar"
+          :src="require(`~/assets/images/avatar.png`)"
+          alt=""
+          class="w-28 h-28 lg:w-36 lg:h-36 mx-2 rounded-full object-cover object-right"
+        />
+      </figure>
       <div class="home-header__brief w-full lg:w-1/2">
-        <h2 ref="headerText" class="home-header__text text-6xl mb-2 font-bold">
+        <h2
+          ref="headerText"
+          class="home-header__text text-2xl lg:text-6xl text-center lg:text-left mb-2 font-bold"
+        >
           <span class="anim-letter">H</span>
           <span class="anim-letter">O</span>
           <span class="anim-letter">L</span>
@@ -18,21 +24,12 @@
         </h2>
         <p
           ref="headerPara"
-          class="text-white font-light tracking-widest anim-para opacity-0"
+          class="text-white text-center lg:text-left font-light tracking-widest anim-para opacity-0"
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-          voluptatibus animi quisquam dolore veritatis minima nam tenetur earum
-          a laborum quo, adipisci laboriosam accusantium vitae vero alias.
+          voluptatibus animi.
         </p>
       </div>
-      <figure class="home-avatar hidden lg:block">
-        <img
-          ref="homeAvatar"
-          :src="require(`~/assets/images/avatar.png`)"
-          alt=""
-          class="w-36 h-36 mx-2 rounded-full object-cover object-right"
-        />
-      </figure>
     </div>
     <div class="home-main p-5">
       <div class="service mb-8">

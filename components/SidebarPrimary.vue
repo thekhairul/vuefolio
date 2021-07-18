@@ -57,7 +57,7 @@
 
     <button
       class="w-16 h-16 border-t dark:border-gray-500"
-      data-tooltip="Download Resume"
+      data-tooltip="Resume"
     >
       <fa
         :icon="['fas', 'cloud-download-alt']"
@@ -83,41 +83,41 @@ export default {
         {
           route: '/',
           icon: 'home-icon',
-          title: 'Profile',
+          title: 'Profile'
         },
         {
           route: '/work',
           icon: 'work-icon',
-          title: 'Experience',
+          title: 'Work'
         },
         {
           route: '/certificates',
           icon: 'certificate-icon',
-          title: 'Certificates',
+          title: 'Certificates'
         },
         {
           route: '/blog',
           icon: 'blog-icon',
-          title: 'Blog',
+          title: 'Blog'
         },
         {
           route: '/contact',
           icon: 'contact-icon',
-          title: 'Contact',
-        },
-      ],
+          title: 'Contact'
+        }
+      ]
     };
   },
   computed: {
     sidebarOpen() {
       return this.$store.state.isSidebarOpen;
-    },
+    }
   },
   methods: {
     handleSidebar() {
       this.$store.commit('toggleSidebar', !this.sidebarOpen);
-    },
-  },
+    }
+  }
 };
 </script>
 

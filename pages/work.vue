@@ -56,6 +56,12 @@
               </li>
             </ul>
             <p class="text-sm text-color-light">{{ work.brief }}</p>
+            <div class="flex items-center">
+              <a href="#" target="_blank" class="w-12 h-12 mr-2"
+                ><code-icon
+              /></a>
+              <a href="#" target="_blank" class="w-12 h-12"><preview-icon /></a>
+            </div>
           </div>
         </div>
       </div>
@@ -64,7 +70,11 @@
 </template>
 
 <script>
+import CodeIcon from '~/assets/images/link.svg?inline';
+import PreviewIcon from '~/assets/images/preview-line.svg?inline';
+
 export default {
+  components: { CodeIcon, PreviewIcon },
   data() {
     return {
       works: [
@@ -180,6 +190,6 @@ export default {
   border-color: var(--accent-dark);
 }
 .mixitup-container {
-  grid-template-columns: repeat(minmax(250px, 400px), 6);
+  grid-template-rows: repeat(minmax(250px, 400px), 6);
 }
 </style>

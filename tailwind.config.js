@@ -5,7 +5,7 @@ module.exports = {
     './layouts/**/*.vue',
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
-    './nuxt.config.{js,ts}',
+    './nuxt.config.{js,ts}'
   ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
@@ -16,12 +16,18 @@ module.exports = {
         'color-dark': 'var(--color-dark)',
         'color-light': 'var(--color-light)',
         'accent-dark': 'var(--accent-dark)',
-        'accent-light': 'var(--accent-light)',
+        'accent-light': 'var(--accent-light)'
       },
-    },
+      transitionTimingFunction: {
+        'in-expo': 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+        'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)'
+      }
+    }
   },
   variants: {
-    extend: {},
+    extend: {
+      translate: ['group-hover']
+    }
   },
-  plugins: [],
+  plugins: []
 };

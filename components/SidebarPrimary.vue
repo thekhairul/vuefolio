@@ -49,6 +49,7 @@
               hover:text-green-600
             "
             :data-tooltip="item.title"
+            data-tooltip-conf="right"
             ><component :is="item.icon" class="fill-current"></component
           ></NuxtLink>
         </li>
@@ -58,6 +59,7 @@
     <button
       class="w-16 h-16 border-t dark:border-gray-500"
       data-tooltip="Resume"
+      data-tooltip-conf="right"
     >
       <fa
         :icon="['fas', 'cloud-download-alt']"

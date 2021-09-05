@@ -83,7 +83,7 @@ export default {
 .app-body {
   transition: margin 0.5s ease-in-out;
   margin-left: 0px;
-  min-width: 300px;
+  // min-width: 300px;
   &.sidebar-open {
     margin-left: 256px;
   }

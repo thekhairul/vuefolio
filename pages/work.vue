@@ -9,28 +9,28 @@
       >
         <button
           type="button"
-          class="control text-xl text-gray-500 font-light px-4 py-2 border-r border-gray-100"
+          class="control text-sm md:text-xl text-gray-500 font-light px-2 md:px-4 py-2 border-r border-gray-100"
           data-filter="all"
         >
           All
         </button>
         <button
           type="button"
-          class="control text-xl text-gray-500 font-light px-4 py-2 border-r border-gray-100"
+          class="control text-sm md:text-xl text-gray-500 font-light px-2 md:px-4 py-2 border-r border-gray-100"
           data-filter=".react"
         >
           React
         </button>
         <button
           type="button"
-          class="control text-xl text-gray-500 font-light px-4 py-2 border-r border-gray-100"
+          class="control text-sm md:text-xl text-gray-500 font-light px-2 md:px-4 py-2 border-r border-gray-100"
           data-filter=".vue"
         >
           Vue
         </button>
         <button
           type="button"
-          class="control text-xl text-gray-500 font-light px-4 py-2"
+          class="control text-sm md:text-xl text-gray-500 font-light px-2 md:px-4 py-2"
           data-filter=".node"
         >
           Node
@@ -38,7 +38,7 @@
       </div>
       <div
         ref="mixitupContainer"
-        class="mixitup-container overflow-hidden p-5 grid grid-cols-4 gap-4"
+        class="mixitup-container overflow-hidden p-2 md:p-5 grid grid-cols-2 md:grid-cols-4 gap-4"
       >
         <div v-for="(work, idx) in works" :key="idx" :class="work.class">
           <img :src="work.image" :alt="work.title" :class="work.imageClass" />
@@ -123,7 +123,7 @@ export default {
           tags: ['react', 'node', 'express', 'ant-design', 'redux', 'mongoDB'],
           brief: 'A tiny app to give and get review of IT companies.',
           class:
-            'group mix react node rounded-lg overflow-hidden relative shadow-lg flex flex-col col-span-2 row-span-4',
+            'group mix react node rounded-lg overflow-hidden relative shadow-lg flex flex-col col-span-2 row-span-2 lg:row-span-4',
           contentClass: 'w-full',
           sourceLink: '',
           demoLink: ''
@@ -171,7 +171,7 @@ export default {
           tags: ['vue', 'quasar', 'firebase', 'scss'],
           brief: 'Resume builder built with quasar framework.',
           class:
-            'group mix vue rounded-lg overflow-hidden relative shadow-lg flex flex-wrap row-span-2',
+            'group mix vue rounded-lg overflow-hidden relative shadow-lg flex flex-wrap row-span-2 col-span-2 lg:col-span-1',
           contentClass: 'w-full',
           sourceLink: '',
           demoLink: ''
@@ -183,7 +183,7 @@ export default {
           tags: ['vue', 'quasar', 'firebase', 'scss'],
           brief: 'Resume builder built with quasar framework.',
           class:
-            'group mix vue rounded-lg overflow-hidden relative shadow-lg flex flex-wrap row-span-2',
+            'group mix vue rounded-lg overflow-hidden relative shadow-lg flex flex-wrap row-span-2 col-span-2 lg:col-span-1',
           contentClass: 'w-full',
           sourceLink: '',
           demoLink: ''
@@ -204,7 +204,7 @@ export default {
   border-color: var(--accent-dark);
 }
 .mixitup-container {
-  grid-template-rows: repeat(minmax(250px, 400px), 6);
+  grid-template-rows: auto;
 }
 .work-action-btn {
   @apply w-10 h-10 p-3 mb-2 bg-white text-color-light rounded-full shadow-md transform transition-transform ease-in-expo -translate-x-full group-hover:translate-x-3 hover:bg-accent-light hover:text-white;

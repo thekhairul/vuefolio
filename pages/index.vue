@@ -1,7 +1,7 @@
 <template>
   <div id="home" class="home">
     <div
-      class="home-header relative h-80 max-h-80 flex flex-wrap items-center justify-center bg-background-dark p-5"
+      class="page-header relative h-80 max-h-80 flex flex-wrap items-center justify-center bg-background-dark p-5"
     >
       <figure class="home-avatar my-2 lg:order-1">
         <img
@@ -11,10 +11,10 @@
           class="w-28 h-28 lg:w-36 lg:h-36 mx-2 rounded-full object-cover object-right"
         />
       </figure>
-      <div class="home-header__brief w-full lg:w-1/2">
+      <div class="page-header__brief w-full lg:w-1/2">
         <h2
           ref="headerText"
-          class="home-header__text text-2xl lg:text-6xl text-center lg:text-left mb-2 font-bold"
+          class="page-header__text text-2xl lg:text-6xl text-center lg:text-left mb-2 font-bold"
         >
           <span class="anim-letter">H</span>
           <span class="anim-letter">O</span>
@@ -94,22 +94,6 @@ export default {
 </script>
 
 <style lang="scss">
-.home-header {
-  &__text {
-    text-shadow: -5px 2px 0px #11b981;
-    letter-spacing: 0.2rem;
-    transition: letter-spacing 0.3s var(--easing-function);
-    &:hover {
-      letter-spacing: 0.5rem;
-    }
-  }
-  .anim-letter,
-  .anim-letter--bang {
-    display: inline-block;
-    color: var(--color-dark);
-    transform: scale(0);
-  }
-}
 .home-avatar {
   img {
     filter: drop-shadow(3px 6px 6px #2d2323) grayscale(1);

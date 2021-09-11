@@ -10,3 +10,20 @@
     height: calc(100vh - 3rem);
   }
 }
+
+.page-header {
+  &__text {
+    text-shadow: -5px 2px 0px #11b981;
+    letter-spacing: 0.2rem;
+    transition: letter-spacing 0.3s var(--easing-function);
+    &:hover {
+      letter-spacing: 0.5rem;
+    }
+  }
+  .anim-letter,
+  .anim-letter--bang {
+    display: inline-block;
+    color: var(--color-dark);
+    transform: scale(0);
+  }
+}

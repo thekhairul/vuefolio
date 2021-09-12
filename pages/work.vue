@@ -1,7 +1,7 @@
 <template>
   <div id="work" class="work bg-gray-50">
     <div
-      class="page-header relative h-80 max-h-80 flex flex-wrap items-center justify-center bg-background-dark p-5"
+      class="page-header relative h-80 max-h-80 flex flex-col items-center justify-center bg-background-dark p-5"
     >
       <h2
         ref="headerText"
@@ -13,6 +13,13 @@
         <span class="anim-letter">K</span>
         <span class="anim-letter--bang">!</span>
       </h2>
+      <p
+        ref="headerPara"
+        class="text-white text-center lg:text-left font-light tracking-widest anim-para opacity-0"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+        voluptatibus animi.
+      </p>
     </div>
     <div class="work-main">
       <div
@@ -61,6 +68,7 @@
           <div class="bg-white p-4" :class="work.contentClass">
             <a
               :href="work.demoLink"
+              target="_blank"
               class="block text-accent-dark font-light text-2xl mb-2"
             >
               {{ work.title }}
@@ -118,6 +126,8 @@ export default {
   mounted() {
     const letters = this.$refs.headerText.querySelectorAll('.anim-letter');
     const bang = this.$refs.headerText.querySelector('.anim-letter--bang');
+    const para = this.$refs.headerPara;
+
     setTimeout(() => {
       this.$anime
         .timeline({
@@ -133,6 +143,11 @@ export default {
           targets: bang,
           scale: [0, 1],
           rotateZ: [45, 15],
+          duration: 600
+        })
+        .add({
+          targets: para,
+          opacity: [0, 1],
           duration: 600
         });
     }, 500);

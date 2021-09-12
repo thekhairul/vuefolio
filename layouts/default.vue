@@ -74,6 +74,8 @@ export default {
 <style lang="scss">
 .sidebar-wrapper {
   margin-left: 64px;
+}
+.sidebar-wrapper {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   &::-webkit-scrollbar {

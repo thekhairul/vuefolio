@@ -7,8 +7,6 @@
         sidebar-wrapper
         h-full
         w-64
-        bg-background-light
-        dark:bg-background-dark
         absolute
         z-10
       "
@@ -26,8 +24,6 @@
       class="
         app-body
         flex-grow
-        bg-background-light
-        dark:bg-background-dark
         h-full
         shadow-lg
         relative
@@ -85,7 +81,6 @@ export default {
 .app-body {
   transition: margin 0.5s ease-in-out;
   margin-left: 0px;
-  // min-width: 300px;
   &.sidebar-open {
     margin-left: 256px;
   }
@@ -99,14 +94,6 @@ export default {
     background-color: #f5f5f5;
   }
   &::-webkit-scrollbar-thumb {
-    // background-image: -webkit-gradient(
-    //   linear,
-    //   left bottom,
-    //   left top,
-    //   color-stop(0.44, rgb(122, 217, 162)),
-    //   color-stop(0.72, rgb(21, 201, 90)),
-    //   color-stop(0.86, rgb(5, 102, 62))
-    // );
     background-color: var(--accent-light);
     background-image: -webkit-linear-gradient(
       45deg,

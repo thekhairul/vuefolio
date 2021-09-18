@@ -3,8 +3,8 @@
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     max-height: 100vh;
-    background-image: url("~/assets/images/bodyBG.jpg");
-    background-size: contain;
+    background-image: url('~/assets/images/bodyBG.jpg');
+    background-size: cover;
   }
   .lg\:container {
     height: calc(100vh - 3rem);
@@ -26,4 +26,43 @@
     color: var(--color-dark);
     transform: scale(0);
   }
+}
+
+/** CORNER **/
+
+.corner-enter,
+.corner-leave-to {
+  opacity: 0;
+  transform: translateY(50px) translateX(50px);
+}
+
+.corner-enter-active,
+.corner-leave-active {
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+/** SLIDEDOWN **/
+
+.slide-down-enter,
+.slide-down-leave-to {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.slide-down-enter-active,
+.slide-down-leave-active {
+  transition: opacity 0.4s, transform 0.4s ease-in-out;
+}
+
+/** SCALE **/
+
+.scale-enter,
+.scale-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.scale-enter-active,
+.scale-leave-active {
+  transition: transform 0.2s, opacity 0.2s;
 }

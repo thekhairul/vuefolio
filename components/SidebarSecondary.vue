@@ -115,4 +115,8 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.sidebar {
+  box-shadow: 20px 0px 0px var(--background-light);
+}
+</style>

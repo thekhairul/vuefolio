@@ -26,7 +26,7 @@
           <li
             v-for="(feature, id) in features"
             :key="id"
-            class="text-sm mb-2"
+            class="text-sm text-color-light mb-2"
             :class="{ 'opacity-40': !model.featureIds.includes(id) }"
           >
             {{ feature }}
@@ -57,9 +57,9 @@ export default {
         'Design to HTML',
         'Animation & Interaction',
         'Vue/React SPA',
+        'API Integration',
         'SSR (Nuxt/Next)',
         'Documentation',
-        'API Integration',
         'PWA'
       ],
       priceModels: [

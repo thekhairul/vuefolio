@@ -1,4 +1,4 @@
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   body {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -6,14 +6,14 @@
     background-image: url("~/assets/images/bodyBG.jpg");
     background-size: contain;
   }
-  .container {
+  .lg\:container {
     height: calc(100vh - 3rem);
   }
 }
 
 .page-header {
   &__text {
-    text-shadow: -5px 2px 0px #11b981;
+    text-shadow: -5px 2px 0px #42b883;
     letter-spacing: 0.2rem;
     transition: letter-spacing 0.3s var(--easing-function);
     &:hover {

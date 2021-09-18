@@ -1,5 +1,5 @@
 <template>
-  <div class="container flex h-screen mx-auto overflow-x-hidden relative">
+  <div class="lg:container flex h-screen lg:mx-auto overflow-x-hidden relative">
     <sidebar-primary />
     <div
       class="
@@ -88,6 +88,36 @@ export default {
   // min-width: 300px;
   &.sidebar-open {
     margin-left: 256px;
+  }
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f5f5f5;
+  }
+  &::-webkit-scrollbar-thumb {
+    // background-image: -webkit-gradient(
+    //   linear,
+    //   left bottom,
+    //   left top,
+    //   color-stop(0.44, rgb(122, 217, 162)),
+    //   color-stop(0.72, rgb(21, 201, 90)),
+    //   color-stop(0.86, rgb(5, 102, 62))
+    // );
+    background-color: var(--accent-light);
+    background-image: -webkit-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent
+    );
   }
 }
 </style>

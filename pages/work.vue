@@ -1,5 +1,5 @@
 <template>
-  <div id="work" class="work bg-gray-50">
+  <div id="work" class="work bg-gray-50 h-full overflow-y-auto page-root">
     <div
       class="page-header relative h-80 max-h-80 flex flex-col items-center justify-center bg-background-dark p-5"
     >
@@ -118,6 +118,7 @@ import works from '~/data/work';
 
 export default {
   components: { CodeIcon, PreviewIcon },
+  transition: { name: 'transform3d', mode: '' },
   data() {
     return {
       works

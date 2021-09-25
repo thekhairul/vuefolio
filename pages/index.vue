@@ -1,5 +1,8 @@
 <template>
-  <div id="home" class="home bg-background-light dark:bg-background-dark">
+  <div
+    id="home"
+    class="home bg-background-light dark:bg-background-dark h-full overflow-y-auto page-root"
+  >
     <div
       class="page-header relative h-80 max-h-80 flex flex-wrap items-center justify-center bg-background-dark p-5"
     >
@@ -60,7 +63,7 @@ import Pricing from '~/components/Pricing.vue';
 export default {
   name: 'Index',
   components: { Pricing },
-  transition: 'scale',
+  transition: { name: 'transform3d', mode: '' },
   mounted() {
     const letters = this.$refs.headerText.querySelectorAll('.anim-letter');
     const bang = this.$refs.headerText.querySelector('.anim-letter--bang');

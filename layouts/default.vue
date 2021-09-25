@@ -1,5 +1,7 @@
 <template>
-  <div class="lg:container flex h-screen lg:mx-auto overflow-x-hidden relative">
+  <div
+    class="lg:container flex h-screen lg:mx-auto lg:rounded overflow-x-hidden relative"
+  >
     <sidebar-primary />
     <div
       class="
@@ -24,11 +26,10 @@
       class="
         app-body
         flex-grow
-        h-full
         shadow-lg
         relative
         z-10
-        overflow-y-auto
+        overflow-hidden
       "
       :class="{ 'sidebar-open': sidebarOpen }"
     >
@@ -83,28 +84,6 @@ export default {
   margin-left: 0px;
   &.sidebar-open {
     margin-left: 256px;
-  }
-  &::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: transparent;
-  }
-  &::-webkit-scrollbar {
-    width: 10px;
-    background-color: #f5f5f5;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--accent-light);
-    background-image: -webkit-linear-gradient(
-      45deg,
-      rgba(255, 255, 255, 0.2) 25%,
-      transparent 25%,
-      transparent 50%,
-      rgba(255, 255, 255, 0.2) 50%,
-      rgba(255, 255, 255, 0.2) 75%,
-      transparent 75%,
-      transparent
-    );
   }
 }
 </style>

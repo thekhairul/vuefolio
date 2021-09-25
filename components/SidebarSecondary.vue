@@ -9,7 +9,7 @@
       dark:bg-background-dark
     "
   >
-    <div class="text-center p-4 border-b dark:border-gray-500 mb-4">
+    <div class="text-center p-4 bg-gray-50 border-b dark:border-gray-500 mb-4">
       <img
         ref="avatar"
         src="~/assets/images/thekhairul.jpg"
@@ -107,8 +107,8 @@ import VanillaTilt from 'vanilla-tilt';
 export default {
   name: 'SidebarSecondary',
   mounted() {
-    if (window.innerWidth > 550) {
-      // this.$store.commit('toggleSidebar', true);
+    if (window.innerWidth > 992) {
+      this.$store.commit('toggleSidebar', true);
     }
     VanillaTilt.init(this.$refs.avatar, { scale: 1.2 });
   }

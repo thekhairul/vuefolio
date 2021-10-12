@@ -26,21 +26,21 @@ export default {
         {
           name: 'facebook',
           url: 'https://www.facebook.com/khairulislam.anik.77',
-          icon: 'facebook',
+          icon: 'facebook'
         },
         {
           name: 'github',
           url: 'https://github.com/thekhairul',
-          icon: 'github',
+          icon: 'github'
         },
         {
-          name: 'medium',
-          url: 'https://www.facebook.com/khairulislam.anik.77',
-          icon: 'medium',
-        },
-      ],
+          name: 'linkedin',
+          url: 'https://www.linkedin.com/in/khairulanik/',
+          icon: 'linkedin'
+        }
+      ]
     };
-  },
+  }
 };
 </script>
 

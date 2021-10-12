@@ -34,7 +34,7 @@
           </h4>
           <h4 class="font-extralight">
             <b class="font-medium">Age:</b>
-            {{ new Date().getFullYear() - 1992 }}
+            {{ new Date().getFullYear() - 1993 }}
           </h4>
           <hr class="mt-4 dark:border-gray-500" />
         </div>

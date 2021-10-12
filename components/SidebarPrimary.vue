@@ -56,8 +56,10 @@
       </ul>
     </nav>
 
-    <button
-      class="w-16 h-16 border-t dark:border-gray-500"
+    <a
+      href="/KhairulAnik_CV.pdf"
+      download=""
+      class="flex justify-center items-center w-16 h-16 border-t dark:border-gray-500"
       data-tooltip="Resume"
       data-tooltip-conf="right"
     >
@@ -65,20 +67,20 @@
         :icon="['fas', 'cloud-download-alt']"
         class="text-green-500 text-2xl"
       />
-    </button>
+    </a>
   </aside>
 </template>
 
 <script>
 import HomeIcon from '~/assets/images/home.svg?inline';
 import WorkIcon from '~/assets/images/briefcase.svg?inline';
-import CertificateIcon from '~/assets/images/graduation-hat.svg?inline';
+import ExperienceIcon from '~/assets/images/graduation-hat.svg?inline';
 import BlogIcon from '~/assets/images/pencil.svg?inline';
 import ContactIcon from '~/assets/images/phone.svg?inline';
 
 export default {
   name: 'SidebarPrimary',
-  components: { HomeIcon, WorkIcon, CertificateIcon, BlogIcon, ContactIcon },
+  components: { HomeIcon, WorkIcon, ExperienceIcon, BlogIcon, ContactIcon },
   data() {
     return {
       navmenus: [
@@ -93,9 +95,9 @@ export default {
           title: 'Work'
         },
         {
-          route: '/certificates',
-          icon: 'certificate-icon',
-          title: 'Certificates'
+          route: '/experience',
+          icon: 'experience-icon',
+          title: 'Experience'
         },
         {
           route: '/blog',

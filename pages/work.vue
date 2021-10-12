@@ -17,8 +17,7 @@
         ref="headerPara"
         class="text-white text-center lg:text-left font-light tracking-widest anim-para opacity-0"
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-        voluptatibus animi.
+        Explore some of my notable works in recent time.
       </p>
     </div>
     <div class="work-main">

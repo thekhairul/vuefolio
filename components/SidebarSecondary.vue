@@ -5,11 +5,11 @@
       sidebar
       flex flex-col
       h-full
-      bg-background-light
-      dark:bg-background-dark
     "
   >
-    <div class="text-center p-4 bg-gray-50 border-b dark:border-gray-500 mb-4">
+    <div
+      class="sidebar-avatar text-center p-4 bg-gray-50 border-b dark:border-gray-500"
+    >
       <img
         ref="avatar"
         src="~/assets/images/thekhairul.jpg"
@@ -23,7 +23,9 @@
       <social-handles />
     </div>
 
-    <div class="flex flex-col h-full justify-between max-h-full">
+    <div
+      class="flex flex-col h-full justify-between max-h-full pt-3 bg-background-light dark:bg-background-dark"
+    >
       <div class="flex-grow">
         <div class="px-4 mb-4">
           <h4 class="font-extralight">
@@ -118,5 +120,8 @@ export default {
 <style lang="scss">
 .sidebar {
   box-shadow: 20px 0px 0px var(--background-light);
+  &-avatar {
+    background: rgba(255, 255, 255, 0.9);
+  }
 }
 </style>

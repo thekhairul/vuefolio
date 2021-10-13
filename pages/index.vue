@@ -29,7 +29,7 @@
           ref="headerPara"
           class="text-white text-center lg:text-left font-light tracking-widest anim-para opacity-0"
         >
-          This is <i>Khairul Anik</i>, a Frontend developer based in Dhaka. I
+          I am <i>Khairul Anik</i>, a Frontend developer based in Dhaka. I
           usually build web interfaces with VUE &amp; React &#128151;
         </p>
       </div>

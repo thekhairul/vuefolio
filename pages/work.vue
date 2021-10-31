@@ -114,9 +114,11 @@
 import CodeIcon from '~/assets/images/link.svg?inline';
 import PreviewIcon from '~/assets/images/preview-line.svg?inline';
 import works from '~/data/work';
+import pageMixin from '~/mixins/page';
 
 export default {
   components: { CodeIcon, PreviewIcon },
+  mixins: [pageMixin],
   transition: { name: 'transform3d', mode: '' },
   data() {
     return {
@@ -124,33 +126,7 @@ export default {
     };
   },
   mounted() {
-    const letters = this.$refs.headerText.querySelectorAll('.anim-letter');
-    const bang = this.$refs.headerText.querySelector('.anim-letter--bang');
-    const para = this.$refs.headerPara;
-
-    setTimeout(() => {
-      this.$anime
-        .timeline({
-          easing: 'easeInOutSine'
-        })
-        .add({
-          targets: letters,
-          scale: [0, 1],
-          duration: 600,
-          delay: this.$anime.stagger(100)
-        })
-        .add({
-          targets: bang,
-          scale: [0, 1],
-          rotateZ: [45, 15],
-          duration: 600
-        })
-        .add({
-          targets: para,
-          opacity: [0, 1],
-          duration: 600
-        });
-    }, 500);
+    this.animateHeader();
     this.mixitup(this.$refs.mixitupContainer);
   }
 };

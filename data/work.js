@@ -81,7 +81,7 @@ export default [
   },
   {
     image: 'https://picsum.photos/400/400',
-    imageClass: 'object-cover object-center w-full lg:w-1/2',
+    imageClass: 'object-cover object-center w-full h-1/2 max-h-60',
     title: 'React Weather',
     tags: [
       { name: 'react', link: '' },
@@ -90,7 +90,7 @@ export default [
     brief: 'A simple weather app built with react.',
     class:
       'group mix react rounded-lg overflow-hidden relative shadow-lg flex flex-wrap col-span-2 row-span-2',
-    contentClass: 'w-full h-full lg:w-1/2',
+    contentClass: 'w-full h-full',
     sourceLink: '',
     demoLink: ''
   },

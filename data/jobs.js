@@ -1,6 +1,7 @@
 export default [
   {
     period: 'October 2019 - present',
+    title: 'Frontend Engineer',
     companyName: 'GrooveDigital LLC',
     companyUrl: 'https://groove.cm',
     companyAddress: 'Lakewood Ranch, Florida, USA',
@@ -9,6 +10,7 @@ export default [
   },
   {
     period: 'August 2017 - September 2019',
+    title: 'Frontend Developer',
     companyName: 'Softograph Limited',
     companyUrl: 'https://www.softograph.com/',
     companyAddress: 'Sector-03, Uttara, Dhaka Bangladesh',

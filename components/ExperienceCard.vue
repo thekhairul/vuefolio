@@ -6,8 +6,8 @@
       </h5>
 
       <div class="p-4 rounded-xl bg-white dark:bg-background-dark shadow-lg">
-        <h6 v-if="card.degree" class="font-extralight mb-2 text-xl italic">
-          {{ card.degree }}
+        <h6 class="font-extralight mb-2 text-xl italic">
+          {{ card.title }}
         </h6>
         <a
           target="_blank"

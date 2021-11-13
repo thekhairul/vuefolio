@@ -69,6 +69,25 @@
         </h2>
         <experience-card :cards="certificates" />
       </div>
+
+      <div class="badges mb-8">
+        <h2 class="text-accent-light font-semibold text-2xl mb-3">
+          badges
+        </h2>
+
+        <div class="flex flex-wrap gap-4">
+          <div class="flex flex-col w-full md:w-auto rounded-xl">
+            <img
+              :src="require(`~/assets/images/pluralsight-vue-badge.jpeg`)"
+              alt=""
+              class="rounded-t-2xl object-cover object-center"
+            />
+            <div class="p-4 rounded-b-2xl shadow-xl">
+              <h3 class="text-color-light font-semibold text-xl">Vue Expert</h3>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>

@@ -75,15 +75,28 @@
           badges
         </h2>
 
-        <div class="flex flex-wrap gap-4">
+        <div class="flex flex-wrap md:flex-nowrap gap-4">
           <div class="flex flex-col w-full md:w-auto rounded-xl">
             <img
               :src="require(`~/assets/images/pluralsight-vue-badge.jpeg`)"
               alt=""
-              class="rounded-t-2xl object-cover object-center"
+              class="md:max-w-xs rounded-t-2xl object-cover object-center"
             />
             <div class="p-4 rounded-b-2xl shadow-xl">
               <h3 class="text-color-light font-semibold text-xl">Vue Expert</h3>
+            </div>
+          </div>
+
+          <div class="flex flex-col w-full md:w-auto rounded-xl">
+            <img
+              :src="require(`~/assets/images/pluralsight-react-badge.png`)"
+              alt=""
+              class="md:max-w-xs rounded-t-2xl object-cover object-center"
+            />
+            <div class="p-4 rounded-b-2xl shadow-xl">
+              <h3 class="text-color-light font-semibold text-xl">
+                React Expert
+              </h3>
             </div>
           </div>
         </div>

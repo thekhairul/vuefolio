@@ -48,6 +48,8 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // https://github.com/nuxt-community/style-resources-module
+    '@nuxtjs/style-resources',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
@@ -82,6 +84,11 @@ export default {
       }
     ]
   ],
+
+  // https://github.com/nuxt-community/style-resources-module
+  styleResources: {
+    scss: ['./assets/css/_variables.scss']
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

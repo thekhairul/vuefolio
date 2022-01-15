@@ -1,3 +1,15 @@
+:root,
+.root,
+#root {
+  --background-dark: #{$background-dark};
+  --background-light: #{$background-light};
+  --color-dark: #{$color-dark};
+  --color-light: #{$color-light};
+  --accent-dark: #{$accent-dark};
+  --accent-light: #{$accent-light};
+  --easing-function: #{$easing-function};
+}
+
 @media screen and (min-width: 1024px) {
   body {
     padding-top: 1.5rem;

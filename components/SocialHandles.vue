@@ -1,5 +1,13 @@
 <template>
-  <ul id="social" class="flex justify-center">
+  <ul
+    id="social"
+    class="flex"
+    :class="{
+      'justify-start': align === 'left',
+      'justify-center': align === 'center',
+      'justify-end': align === 'right'
+    }"
+  >
     <li v-for="(media, idx) in socialMedias" :key="idx" class="p-2">
       <a
         :href="media.url"
@@ -20,6 +28,13 @@
 
 <script>
 export default {
+  props: {
+    align: {
+      type: String,
+      default: 'center',
+      validator: val => ['left', 'center', 'right'].includes(val)
+    }
+  },
   data() {
     return {
       socialMedias: [

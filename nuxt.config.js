@@ -67,7 +67,10 @@ export default {
               'faArrowLeft',
               'faArrowCircleRight',
               'faArrowCircleLeft',
-              'faQuoteLeft'
+              'faQuoteLeft',
+              'faMapMarkerAlt',
+              'faPhoneAlt',
+              'faEnvelope'
             ]
           },
           {

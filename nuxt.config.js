@@ -20,7 +20,8 @@ export default {
   plugins: [
     { src: '~/plugins/vue-anime.js', mode: 'client' },
     { src: '~/plugins/vue-awesome-swiper', mode: 'client' },
-    { src: '~/plugins/mixitup', mode: 'client' }
+    { src: '~/plugins/mixitup', mode: 'client' },
+    { src: '~/plugins/notifications-client', ssr: false, mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -70,7 +71,8 @@ export default {
               'faQuoteLeft',
               'faMapMarkerAlt',
               'faPhoneAlt',
-              'faEnvelope'
+              'faEnvelope',
+              'faSpinner'
             ]
           },
           {

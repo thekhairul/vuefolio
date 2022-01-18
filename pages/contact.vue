@@ -82,7 +82,13 @@
         </address>
       </div>
       <div class="w-full md:w-1/2 px-4 py-10">
-        <form action="" class="max-w-md">
+        <form class="max-w-md" @submit.prevent="submitContactForm">
+          <input
+            v-model="honeypot"
+            type="text"
+            name="honeypot"
+            style="display: none;"
+          />
           <legend class="mb-4">
             <h2 class="text-color-light font-extrabold text-3xl mb-2">
               Let's Talk
@@ -98,6 +104,7 @@
             <label for="name" class="block text-gray-400 mb-2">Your Name</label>
             <input
               id="name"
+              v-model="name"
               type="text"
               name="name"
               class="rounded-3xl bg-gray-100 px-4 py-2"
@@ -110,9 +117,11 @@
             >
             <input
               id="email"
+              v-model="email"
               type="email"
               name="email"
-              class="rounded-3xl bg-gray-100 px-4 py-2"
+              class="w-full max-w-xs rounded-3xl bg-gray-100 px-4 py-2"
+              required
             />
           </div>
 
@@ -122,9 +131,11 @@
             >
             <textarea
               id="message"
+              v-model="message"
               name="message"
               rows="6"
               class="w-full rounded-3xl bg-gray-100 px-4 py-2"
+              required
             />
           </div>
 
@@ -132,11 +143,13 @@
             class="bg-accent-dark rounded-3xl shadow-lg px-4 py-2 text-white font-bold uppercase tracking-widest"
             type="submit"
           >
-            Send Message
+            <fa v-if="isFormSubmitting" :icon="['fas', 'spinner']" spin />
+            <span v-else>Send Message</span>
           </button>
         </form>
       </div>
     </div>
+    <notifications position="bottom right" :duration="-1" />
   </div>
 </template>
 
@@ -151,11 +164,55 @@ export default {
   data() {
     return {
       jobs,
-      certificates
+      certificates,
+      name: '',
+      email: '',
+      message: '',
+      honeypot: '',
+      isFormSubmitting: false
     };
   },
   mounted() {
     this.animateHeader();
+  },
+  methods: {
+    submitContactForm(e) {
+      this.isFormSubmitting = true;
+      const body = {
+        name: this.name,
+        email: this.email,
+        subject: 'StaticForms - Contact Form',
+        honeypot: this.honeypot, // if any value received in this field, form submission will be ignored.
+        message: this.message,
+        replyTo: '@', // this will set replyTo of email to email address entered in the form
+        accessKey: 'f6fa7901-075a-4742-82d3-c14602c30221'
+      };
+
+      this.$axios
+        .$post('https://api.staticforms.xyz/submit', JSON.stringify(body), {
+          headers: { 'Content-Type': 'application/json' }
+        })
+        .then(res => {
+          this.name = '';
+          this.email = '';
+          this.message = '';
+          this.$notify({
+            title: 'Success!',
+            text: 'Got the message. Will get back to you ASAP',
+            type: 'success'
+          });
+        })
+        .catch(err => {
+          this.$notify({
+            title: 'Failed!',
+            text: err.message,
+            type: 'error'
+          });
+        })
+        .finally(() => {
+          this.isFormSubmitting = false;
+        });
+    }
   }
 };
 </script>

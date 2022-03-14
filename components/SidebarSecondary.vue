@@ -109,7 +109,7 @@ import VanillaTilt from 'vanilla-tilt';
 export default {
   name: 'SidebarSecondary',
   mounted() {
-    if (window.innerWidth > 1200) {
+    if (window.innerWidth > 1440) {
       this.$store.commit('toggleSidebar', true);
     }
     VanillaTilt.init(this.$refs.avatar, { scale: 1.2 });

@@ -5,8 +5,11 @@ export default [
     companyName: 'GrooveDigital LLC',
     companyUrl: 'https://groove.cm',
     companyAddress: 'Lakewood Ranch, Florida, USA',
-    description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, laboriosam et incidunt saepe eaque sit facilis itaque laudantium labore officiis placeat praesentium nemo nihil optio ad? Perspiciatis earum adipisci enim, fugit accusantium delectus perferendis tempore nulla nobis corporis necessitatibus. Fugiat!'
+    description: `<li>Creating, maintaining, and debugging various features for the products</li>
+      <li>Integrating third-party services via REST APIs</li>
+      <li>Onboarding and mentoring new developers</li>
+      <li>Assisting in documentation and development of workflows and pipelines</li>
+    `
   },
   {
     period: 'August 2017 - September 2019',
@@ -15,6 +18,6 @@ export default [
     companyUrl: 'https://www.softograph.com/',
     companyAddress: 'Sector-03, Uttara, Dhaka Bangladesh',
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, laboriosam et incidunt saepe eaque sit facilis itaque laudantium labore officiis placeat praesentium nemo nihil optio ad? Perspiciatis earum adipisci enim, fugit accusantium delectus perferendis tempore nulla nobis corporis necessitatibus. Fugiat!'
+      'Used to build the UI portion of websites and dashboard for our clients. Also worked heavily in the RnD section'
   }
 ];

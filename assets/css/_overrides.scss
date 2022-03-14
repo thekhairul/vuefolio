@@ -1,3 +1,6 @@
+*:focus {
+  outline-color: var(--accent-dark);
+}
 button:focus {
   outline: none;
 }

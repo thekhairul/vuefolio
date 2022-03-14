@@ -44,7 +44,7 @@
           opacity-0
         "
       >
-        Say hello! Stay in touch &#128578;
+        Say hello! Stay in touch <span class="text-2xl">&#128578;</span>
       </p>
     </div>
 
@@ -58,23 +58,25 @@
           class="w-60 mb-4"
         />
         <address>
-          <p class="text-gray-300 not-italic mb-2">
+          <p class="text-gray-600 not-italic mb-2">
             <fa :icon="['fas', 'map-marker-alt']" />
-            <span class="text-gray-400 ml-2"
+            <span class="font-light ml-2"
               >Bashundhara R/A, Dhaka, Bangladesh</span
             >
           </p>
-          <p class="text-gray-300 not-italic mb-2">
+          <p class="text-gray-600 hover:text-accent-light not-italic mb-2">
             <fa :icon="['fas', 'phone-alt']" />
-            <a href="tel:8801799582488" class="text-gray-400 ml-2"
+            <a
+              href="tel:8801799582488"
+              class="font-light hover:text-accent-light ml-2"
               >8801799582488</a
             >
           </p>
-          <p class="text-gray-300 not-italic mb-2">
+          <p class="text-gray-600 hover:text-accent-light not-italic mb-2">
             <fa :icon="['fas', 'envelope']" />
             <a
               href="mailto:thekhairul.office@gmail.com"
-              class="text-gray-400 ml-2"
+              class="font-light hover:text-accent-light ml-2"
               >thekhairul.office@gmail.com</a
             >
           </p>
@@ -101,18 +103,18 @@
           </legend>
 
           <div class="mb-2">
-            <label for="name" class="block text-gray-400 mb-2">Your Name</label>
+            <label for="name" class="block text-gray-500 mb-2">Your Name</label>
             <input
               id="name"
               v-model="name"
               type="text"
               name="name"
-              class="rounded-3xl bg-gray-100 px-4 py-2"
+              class="rounded-3xl bg-gray-100 px-4 py-2 focus:outline-accent-light"
             />
           </div>
 
           <div class="mb-2">
-            <label for="email" class="block text-gray-400 mb-2"
+            <label for="email" class="block text-gray-500 mb-2"
               >Your Email</label
             >
             <input
@@ -126,7 +128,7 @@
           </div>
 
           <div class="mb-2">
-            <label for="message" class="block text-gray-400 mb-2"
+            <label for="message" class="block text-gray-500 mb-2"
               >Your Message</label
             >
             <textarea
@@ -155,16 +157,12 @@
 
 <script>
 import pageMixin from '~/mixins/page';
-import jobs from '~/data/jobs';
-import certificates from '~/data/certificates';
 
 export default {
   mixins: [pageMixin],
   transition: { name: 'transform3d', mode: '' },
   data() {
     return {
-      jobs,
-      certificates,
       name: '',
       email: '',
       message: '',
@@ -199,14 +197,16 @@ export default {
           this.$notify({
             title: 'Success!',
             text: 'Got the message. Will get back to you ASAP',
-            type: 'success'
+            type: 'success',
+            duration: 5000
           });
         })
         .catch(err => {
           this.$notify({
             title: 'Failed!',
             text: err.message,
-            type: 'error'
+            type: 'error',
+            duration: 5000
           });
         })
         .finally(() => {

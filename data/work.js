@@ -1,17 +1,18 @@
 export default [
   {
-    image: 'nuxttodo-preview.jpg',
+    image: 'citybusbd-preview.jpg',
     imageClass: 'object-cover object-top w-full h-96',
-    title: 'React Weather',
+    title: 'Citybusbd',
     tags: [
       { name: 'react', link: '' },
-      { name: 'scss', link: '' }
+      { name: 'next js', link: '' },
+      { name: 'chakra UI', link: '' }
     ],
-    brief: 'A simple weather app built with react.',
-    class: 'group mix react rounded-lg overflow-hidden relative shadow-lg',
+    brief: 'App to find bus routes and fares in cities.',
+    class: 'group mix vue rounded-lg overflow-hidden relative shadow-lg',
     contentClass: 'w-full h-full border-t-4 border-accent-dark',
-    sourceLink: '',
-    demoLink: ''
+    sourceLink: 'https://github.com/thekhairul/citybusbd',
+    demoLink: 'http://citybusbd.com/'
   },
   {
     image: 'citybusbd-preview.jpg',
@@ -32,21 +33,19 @@ export default [
   {
     image: 'vuesume-preview.jpg',
     imageClass: 'object-cover object-center w-full lg:w-1/2',
-    title: 'Tiny Glassdoor',
+    title: 'Vuesume',
     tags: [
-      { name: 'react', link: '' },
-      { name: 'node', link: '' },
-      { name: 'express', link: '' },
-      { name: 'ant-design', link: '' },
-      { name: 'mongoDB', link: '' }
+      { name: 'vue', link: '' },
+      { name: 'quasar', link: '' },
+      { name: 'firebase', link: '' }
     ],
-    brief: 'A tiny app to give and get review of IT companies.',
+    brief: 'A quick resume builder built with Vue and Firebase.',
     class:
       'group mix react node rounded-lg overflow-hidden relative shadow-lg flex flex-wrap lg:col-span-2',
     contentClass:
-      'w-full lg:w-1/2 border-t-4 lg:border-t-0 lg:border-l-4 border-accent-dark h-full',
-    sourceLink: '',
-    demoLink: ''
+      'w-full lg:w-1/2 border-t-4 lg:border-t-0 shadow-2xl border-accent-dark h-full',
+    sourceLink: 'https://bitbucket.org/khairulanik/vuesume/',
+    demoLink: 'https://vuesume.github.io/'
   },
   {
     image: 'nuxttodo-preview.jpg',
@@ -93,7 +92,7 @@ export default [
     class:
       'group mix react node rounded-lg overflow-hidden relative shadow-lg flex flex-wrap lg:col-span-2',
     contentClass:
-      'w-full lg:w-1/2 border-t-4 lg:border-t-0 lg:border-l-4 border-accent-dark h-full',
+      'w-full lg:w-1/2 border-t-4 lg:border-t-0 shadow-2xl border-accent-dark h-full',
     sourceLink: '',
     demoLink: ''
   }

@@ -51,7 +51,7 @@
           opacity-0
         "
       >
-        Explore some of my notable works in recent time.
+        Breathe, sleep, code, repeat.
       </p>
     </div>
 
@@ -106,9 +106,9 @@
 </template>
 
 <script>
-import pageMixin from '~/mixins/page';
-import jobs from '~/data/jobs';
 import certificates from '~/data/certificates';
+import jobs from '~/data/jobs';
+import pageMixin from '~/mixins/page';
 
 export default {
   mixins: [pageMixin],

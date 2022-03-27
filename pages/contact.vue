@@ -96,9 +96,8 @@
               Let's Talk
             </h2>
             <p class="text-gray-500">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Aspernatur architecto illo asperiores voluptatibus eveniet in
-              earum ad, doloribus unde a?
+              Feel free to leave a message if you happen to have a project idea
+              or want to discuss about an offer :)
             </p>
           </legend>
 

@@ -17,7 +17,7 @@
         ref="headerPara"
         class="text-white text-center lg:text-left font-light tracking-widest anim-para opacity-0"
       >
-        Explore some of my notable works in recent time.
+        Work Hard, Designate Harder
       </p>
     </div>
     <div class="work-main">
@@ -66,7 +66,7 @@
           />
           <div class="bg-white p-4" :class="work.contentClass">
             <a
-              :href="work.demoLink"
+              :href="work.demoLink || work.sourceLink || '#'"
               target="_blank"
               class="block text-accent-dark text-2xl mb-2"
             >
@@ -85,21 +85,26 @@
             <p class="text-sm text-color-light">{{ work.brief }}</p>
             <div class="flex flex-col absolute top-0 left-0 mt-3">
               <a
-                href="#"
+                :href="work.sourceLink || '#'"
                 target="_blank"
                 data-tooltip="Source code"
                 data-tooltip-conf="right"
                 class="work-action-btn"
+                :class="{
+                  'cursor-not-allowed pointer-events-none': !work.sourceLink
+                }"
               >
                 <code-icon />
               </a>
               <a
-                href="#"
+                :href="work.demoLink || '#'"
                 target="_blank"
                 data-tooltip="Live preview"
                 data-tooltip-conf="right"
-                class="work-action-btn"
-                :class="'delay-75'"
+                class="work-action-btn delay-75"
+                :class="{
+                  'cursor-not-allowed pointer-events-none': !work.demoLink
+                }"
                 ><preview-icon
               /></a>
             </div>

@@ -4,44 +4,40 @@ export default [
     imageClass: 'object-cover object-top w-full h-96',
     title: 'Citybusbd',
     tags: [
-      { name: 'react', link: '' },
-      { name: 'next js', link: '' },
-      { name: 'chakra UI', link: '' }
+      { name: 'react', link: 'https://reactjs.org/' },
+      { name: 'next js', link: 'https://nextjs.org/' },
+      { name: 'chakra UI', link: 'https://chakra-ui.com/' }
     ],
     brief: 'App to find bus routes and fares in cities.',
-    class: 'group mix vue rounded-lg overflow-hidden relative shadow-lg',
+    class: 'group mix react rounded-lg overflow-hidden relative shadow-lg',
     contentClass: 'w-full h-full border-t-4 border-accent-dark',
     sourceLink: 'https://github.com/thekhairul/citybusbd',
     demoLink: 'http://citybusbd.com/'
   },
   {
-    image: 'citybusbd-preview.jpg',
+    image: 'bdgeoapi-preview.jpg',
     imageClass: 'object-cover object-top w-full h-96',
-    title: 'Vuesume',
-    tags: [
-      { name: 'vue', link: '' },
-      { name: 'quasar', link: '' },
-      { name: 'firebase', link: '' },
-      { name: 'scss', link: '' }
-    ],
-    brief: 'Resume builder built with quasar framework.',
-    class: 'group mix vue rounded-lg overflow-hidden relative shadow-lg',
+    title: 'BdgeoAPI',
+    tags: [{ name: 'node', link: 'https://nodejs.org/en/' }],
+    brief:
+      'A simple node api to retrieve district, sub-district and unions in Bangladesh',
+    class: 'group mix node rounded-lg overflow-hidden relative shadow-lg',
     contentClass: 'w-full h-full border-t-4 border-accent-dark',
-    sourceLink: '',
-    demoLink: ''
+    sourceLink: 'https://github.com/thekhairul/bdgeoapi',
+    demoLink: null
   },
   {
     image: 'vuesume-preview.jpg',
     imageClass: 'object-cover object-center w-full lg:w-1/2',
     title: 'Vuesume',
     tags: [
-      { name: 'vue', link: '' },
-      { name: 'quasar', link: '' },
-      { name: 'firebase', link: '' }
+      { name: 'vue', link: 'https://vuejs.org/' },
+      { name: 'quasar', link: 'https://quasar.dev/' },
+      { name: 'firebase', link: 'https://firebase.google.com/' }
     ],
     brief: 'A quick resume builder built with Vue and Firebase.',
     class:
-      'group mix react node rounded-lg overflow-hidden relative shadow-lg flex flex-wrap lg:col-span-2',
+      'group mix vue rounded-lg overflow-hidden relative shadow-lg flex flex-wrap lg:col-span-2',
     contentClass:
       'w-full lg:w-1/2 border-t-4 lg:border-t-0 shadow-2xl border-accent-dark h-full',
     sourceLink: 'https://bitbucket.org/khairulanik/vuesume/',
@@ -50,50 +46,32 @@ export default [
   {
     image: 'nuxttodo-preview.jpg',
     imageClass: 'object-cover object-top w-full h-96',
-    title: 'React Weather',
+    title: 'Nuxt Todo',
     tags: [
-      { name: 'react', link: '' },
-      { name: 'scss', link: '' }
+      { name: 'vue', link: 'https://vuejs.org/' },
+      { name: 'nuxt', link: 'https://nuxtjs.org/' },
+      { name: 'tailwind', link: 'https://tailwindcss.com/' }
     ],
-    brief: 'A simple weather app built with react.',
+    brief: 'Todo app built with nuxt and tailwind.',
     class:
-      'group mix react rounded-lg overflow-hidden relative shadow-lg flex flex-wrap',
+      'group mix vue rounded-lg overflow-hidden relative shadow-lg flex flex-wrap',
     contentClass: 'w-full h-full  border-t-4 border-accent-dark',
-    sourceLink: '',
-    demoLink: ''
+    sourceLink: null,
+    demoLink: 'https://thekhairul.github.io/'
   },
   {
-    image: 'nuxttodo-preview.jpg',
+    image: 'react-weather.jpg',
     imageClass: 'object-cover object-top w-full h-96',
     title: 'React Weather',
     tags: [
-      { name: 'react', link: '' },
-      { name: 'scss', link: '' }
+      { name: 'react', link: 'https://reactjs.org/' },
+      { name: 'scss', link: 'https://sass-lang.com/' }
     ],
     brief: 'A simple weather app built with react.',
     class:
       'group mix react rounded-lg overflow-hidden relative shadow-lg flex flex-wrap',
     contentClass: 'w-full h-full  border-t-4 border-accent-dark',
-    sourceLink: '',
-    demoLink: ''
-  },
-  {
-    image: 'vuesume-preview.jpg',
-    imageClass: 'object-cover object-center w-full lg:w-1/2',
-    title: 'Tiny Glassdoor',
-    tags: [
-      { name: 'react', link: '' },
-      { name: 'node', link: '' },
-      { name: 'express', link: '' },
-      { name: 'ant-design', link: '' },
-      { name: 'mongoDB', link: '' }
-    ],
-    brief: 'A tiny app to give and get review of IT companies.',
-    class:
-      'group mix react node rounded-lg overflow-hidden relative shadow-lg flex flex-wrap lg:col-span-2',
-    contentClass:
-      'w-full lg:w-1/2 border-t-4 lg:border-t-0 shadow-2xl border-accent-dark h-full',
-    sourceLink: '',
-    demoLink: ''
+    sourceLink: 'https://github.com/thekhairul/react-weather/tree/develop',
+    demoLink: 'https://thekhairul.github.io/react-weather/'
   }
 ];

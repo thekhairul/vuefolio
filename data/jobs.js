@@ -4,8 +4,9 @@ export default [
     title: 'Frontend Engineer',
     companyName: 'GrooveDigital LLC',
     companyUrl: 'https://groove.cm',
-    companyAddress: 'Lakewood Ranch, Florida, USA',
-    description: `<li>Creating, maintaining, and debugging various features for the products</li>
+    companyAddress:
+      '200 E Palmetto Park Rd,Suite 107, Boca Raton, Florida, USA',
+    description: `<li>Creating, maintaining, and debugging various features for the Groovepages funnel/page builder</li>
       <li>Integrating third-party services via REST APIs</li>
       <li>Onboarding and mentoring new developers</li>
       <li>Assisting in documentation and development of workflows and pipelines</li>

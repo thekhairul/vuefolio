@@ -34,10 +34,10 @@
           <h4 class="font-extralight">
             <b class="font-medium">City:</b> Dhaka
           </h4>
-          <h4 class="font-extralight">
+          <!-- <h4 class="font-extralight">
             <b class="font-medium">Age:</b>
             {{ new Date().getFullYear() - 1993 }}
-          </h4>
+          </h4> -->
           <hr class="mt-4 dark:border-gray-500" />
         </div>
 

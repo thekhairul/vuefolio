@@ -26,28 +26,28 @@
       >
         <button
           type="button"
-          class="control text-sm md:text-xl text-gray-500 font-light px-2 md:px-4 py-2 bg-whie border-r border-gray-100"
+          class="control text-sm md:text-xl text-gray-500 px-2 md:px-4 py-2 bg-whie border-r"
           data-filter="all"
         >
           All
         </button>
         <button
           type="button"
-          class="control text-sm md:text-xl text-gray-500 font-light px-2 md:px-4 py-2 bg-whie border-r border-gray-100"
+          class="control text-sm md:text-xl text-gray-500 px-2 md:px-4 py-2 bg-whie border-r"
           data-filter=".react"
         >
           React
         </button>
         <button
           type="button"
-          class="control text-sm md:text-xl text-gray-500 font-light px-2 md:px-4 py-2 bg-whie border-r border-gray-100"
+          class="control text-sm md:text-xl text-gray-500 px-2 md:px-4 py-2 bg-whie border-r"
           data-filter=".vue"
         >
           Vue
         </button>
         <button
           type="button"
-          class="control text-sm md:text-xl text-gray-500 font-light px-2 md:px-4 py-2 bg-whie"
+          class="control text-sm md:text-xl text-gray-500 px-2 md:px-4 py-2 bg-whie"
           data-filter=".node"
         >
           Node
@@ -55,20 +55,20 @@
       </div>
       <div
         ref="mixitupContainer"
-        class="mixitup-container overflow-hidden p-2 md:p-5 grid grid-cols-2 md:grid-cols-4 gap-4"
+        class="mixitup-container overflow-hidden p-2 md:p-5 grid grid-cols-1 lg:grid-cols-2 gap-4"
       >
         <div v-for="(work, idx) in works" :key="idx" :class="work.class">
           <img
-            :src="work.image"
+            :src="require(`@/assets/images/${work.image}`)"
             :alt="work.title"
-            class="filter group-hover:grayscale"
+            class="filter group-hover:brightness-50"
             :class="work.imageClass"
           />
           <div class="bg-white p-4" :class="work.contentClass">
             <a
               :href="work.demoLink"
               target="_blank"
-              class="block text-accent-dark font-light text-2xl mb-2"
+              class="block text-accent-dark text-2xl mb-2"
             >
               {{ work.title }}
             </a>

@@ -29,7 +29,7 @@ module.exports = {
     extend: {
       translate: ['group-hover'],
       filter: ['group-hover'],
-      grayscale: ['group-hover']
+      brightness: ['group-hover']
     }
   },
   plugins: []

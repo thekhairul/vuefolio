@@ -1,22 +1,21 @@
 export default [
   {
-    image: 'https://picsum.photos/400/400',
-    imageClass: 'object-cover object-center w-full lg:w-1/2',
+    image: 'nuxttodo-preview.jpg',
+    imageClass: 'object-cover object-top w-full h-96',
     title: 'React Weather',
     tags: [
       { name: 'react', link: '' },
       { name: 'scss', link: '' }
     ],
     brief: 'A simple weather app built with react.',
-    class:
-      'group mix react rounded-lg overflow-hidden relative shadow-lg flex flex-wrap col-span-2 row-span-2',
-    contentClass: 'w-full h-full lg:w-1/2',
+    class: 'group mix react rounded-lg overflow-hidden relative shadow-lg',
+    contentClass: 'w-full h-full border-t-4 border-accent-dark',
     sourceLink: '',
     demoLink: ''
   },
   {
-    image: 'https://picsum.photos/400/400',
-    imageClass: 'object-cover object-center w-full lg:w-1/2',
+    image: 'citybusbd-preview.jpg',
+    imageClass: 'object-cover object-top w-full h-96',
     title: 'Vuesume',
     tags: [
       { name: 'vue', link: '' },
@@ -25,15 +24,14 @@ export default [
       { name: 'scss', link: '' }
     ],
     brief: 'Resume builder built with quasar framework.',
-    class:
-      'group mix vue rounded-lg overflow-hidden relative shadow-lg flex flex-wrap col-span-2 row-span-2',
-    contentClass: 'w-full h-full lg:w-1/2',
+    class: 'group mix vue rounded-lg overflow-hidden relative shadow-lg',
+    contentClass: 'w-full h-full border-t-4 border-accent-dark',
     sourceLink: '',
     demoLink: ''
   },
   {
-    image: 'https://picsum.photos/400/200',
-    imageClass: 'object-cover object-center w-full',
+    image: 'vuesume-preview.jpg',
+    imageClass: 'object-cover object-center w-full lg:w-1/2',
     title: 'Tiny Glassdoor',
     tags: [
       { name: 'react', link: '' },
@@ -44,87 +42,58 @@ export default [
     ],
     brief: 'A tiny app to give and get review of IT companies.',
     class:
-      'group mix react node rounded-lg overflow-hidden relative shadow-lg flex flex-col col-span-2 row-span-2 lg:row-span-4',
-    contentClass: 'w-full h-full',
+      'group mix react node rounded-lg overflow-hidden relative shadow-lg flex flex-wrap lg:col-span-2',
+    contentClass:
+      'w-full lg:w-1/2 border-t-4 lg:border-t-0 lg:border-l-4 border-accent-dark h-full',
     sourceLink: '',
     demoLink: ''
   },
   {
-    image: 'https://picsum.photos/400/400',
+    image: 'nuxttodo-preview.jpg',
+    imageClass: 'object-cover object-top w-full h-96',
+    title: 'React Weather',
+    tags: [
+      { name: 'react', link: '' },
+      { name: 'scss', link: '' }
+    ],
+    brief: 'A simple weather app built with react.',
+    class:
+      'group mix react rounded-lg overflow-hidden relative shadow-lg flex flex-wrap',
+    contentClass: 'w-full h-full  border-t-4 border-accent-dark',
+    sourceLink: '',
+    demoLink: ''
+  },
+  {
+    image: 'nuxttodo-preview.jpg',
+    imageClass: 'object-cover object-top w-full h-96',
+    title: 'React Weather',
+    tags: [
+      { name: 'react', link: '' },
+      { name: 'scss', link: '' }
+    ],
+    brief: 'A simple weather app built with react.',
+    class:
+      'group mix react rounded-lg overflow-hidden relative shadow-lg flex flex-wrap',
+    contentClass: 'w-full h-full  border-t-4 border-accent-dark',
+    sourceLink: '',
+    demoLink: ''
+  },
+  {
+    image: 'vuesume-preview.jpg',
     imageClass: 'object-cover object-center w-full lg:w-1/2',
-    title: 'React Weather',
+    title: 'Tiny Glassdoor',
     tags: [
       { name: 'react', link: '' },
-      { name: 'scss', link: '' }
+      { name: 'node', link: '' },
+      { name: 'express', link: '' },
+      { name: 'ant-design', link: '' },
+      { name: 'mongoDB', link: '' }
     ],
-    brief: 'A simple weather app built with react.',
+    brief: 'A tiny app to give and get review of IT companies.',
     class:
-      'group mix react rounded-lg overflow-hidden relative shadow-lg flex flex-wrap col-span-2 row-span-2',
-    contentClass: 'w-full h-full lg:w-1/2',
-    sourceLink: '',
-    demoLink: ''
-  },
-  {
-    image: 'https://picsum.photos/400/400',
-    imageClass: 'object-cover object-center w-full lg:w-1/2',
-    title: 'React Weather',
-    tags: [
-      { name: 'react', link: '' },
-      { name: 'scss', link: '' }
-    ],
-    brief: 'A simple weather app built with react.',
-    class:
-      'group mix react rounded-lg overflow-hidden relative shadow-lg flex flex-wrap col-span-2 row-span-2',
-    contentClass: 'w-full h-full lg:w-1/2',
-    sourceLink: '',
-    demoLink: ''
-  },
-  {
-    image: 'https://picsum.photos/400/400',
-    imageClass: 'object-cover object-center w-full h-1/2 max-h-60',
-    title: 'React Weather',
-    tags: [
-      { name: 'react', link: '' },
-      { name: 'scss', link: '' }
-    ],
-    brief: 'A simple weather app built with react.',
-    class:
-      'group mix react rounded-lg overflow-hidden relative shadow-lg flex flex-wrap col-span-2 row-span-2',
-    contentClass: 'w-full h-full',
-    sourceLink: '',
-    demoLink: ''
-  },
-  {
-    image: 'https://picsum.photos/400/400',
-    imageClass: 'object-cover object-center w-full h-1/2',
-    title: 'Vuesume',
-    tags: [
-      { name: 'vue', link: '' },
-      { name: 'quasar', link: '' },
-      { name: 'firebase', link: '' },
-      { name: 'scss', link: '' }
-    ],
-    brief: 'Resume builder built with quasar framework.',
-    class:
-      'group mix vue rounded-lg overflow-hidden relative shadow-lg flex flex-wrap row-span-2 col-span-2 lg:col-span-1',
-    contentClass: 'w-full h-full',
-    sourceLink: '',
-    demoLink: ''
-  },
-  {
-    image: 'https://picsum.photos/400/400',
-    imageClass: 'object-cover object-center w-full h-1/2',
-    title: 'Vuesume',
-    tags: [
-      { name: 'vue', link: '' },
-      { name: 'quasar', link: '' },
-      { name: 'firebase', link: '' },
-      { name: 'scss', link: '' }
-    ],
-    brief: 'Resume builder built with quasar framework.',
-    class:
-      'group mix vue rounded-lg overflow-hidden relative shadow-lg flex flex-wrap row-span-2 col-span-2 lg:col-span-1',
-    contentClass: 'w-full h-full',
+      'group mix react node rounded-lg overflow-hidden relative shadow-lg flex flex-wrap lg:col-span-2',
+    contentClass:
+      'w-full lg:w-1/2 border-t-4 lg:border-t-0 lg:border-l-4 border-accent-dark h-full',
     sourceLink: '',
     demoLink: ''
   }

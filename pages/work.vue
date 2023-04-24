@@ -1,5 +1,8 @@
 <template>
-  <div id="work" class="work bg-gray-50 h-full overflow-y-auto page-root">
+  <div
+    id="work"
+    class="work bg-color-light dark:bg-color-dark h-full overflow-y-auto page-root"
+  >
     <div
       class="page-header relative h-80 max-h-80 flex flex-col items-center justify-center bg-background-dark p-5"
     >
@@ -55,7 +58,7 @@
       </div>
       <div
         ref="mixitupContainer"
-        class="mixitup-container overflow-hidden p-2 md:p-5 grid grid-cols-1 lg:grid-cols-2 gap-4"
+        class="mixitup-container overflow-hidden p-2 md:p-5 columns-3 gap-4"
       >
         <div v-for="(work, idx) in works" :key="idx" :class="work.class">
           <img
@@ -68,7 +71,7 @@
             <a
               :href="work.demoLink || work.sourceLink || '#'"
               target="_blank"
-              class="block text-accent-dark text-2xl mb-2"
+              class="block text-color-accent text-2xl mb-2"
             >
               {{ work.title }}
             </a>
@@ -77,7 +80,7 @@
                 <a
                   :href="tag.link"
                   target="_blank"
-                  class="inline-block px-2 py-1 rounded-md transition-colors bg-gray-100 hover:bg-accent-dark text-color-light hover:text-color-dark font-light cursor-pointer"
+                  class="inline-block px-2 py-1 rounded-md transition-colors bg-color-accent text-color-accent font-light cursor-pointer"
                   >{{ tag.name }}</a
                 >
               </li>
@@ -91,7 +94,7 @@
                 data-tooltip-conf="right"
                 class="work-action-btn"
                 :class="{
-                  'cursor-not-allowed pointer-events-none': !work.sourceLink
+                  'cursor-not-allowed pointer-events-none': !work.sourceLink,
                 }"
               >
                 <code-icon />
@@ -103,7 +106,7 @@
                 data-tooltip-conf="right"
                 class="work-action-btn delay-75"
                 :class="{
-                  'cursor-not-allowed pointer-events-none': !work.demoLink
+                  'cursor-not-allowed pointer-events-none': !work.demoLink,
                 }"
                 ><preview-icon
               /></a>
@@ -127,26 +130,26 @@ export default {
   transition: { name: 'transform3d', mode: '' },
   data() {
     return {
-      works
+      works,
     };
   },
   mounted() {
     this.animateHeader();
     this.mixitup(this.$refs.mixitupContainer);
-  }
+  },
 };
 </script>
 
 <style lang="scss">
 .mixitup-control-active {
-  background: var(--accent-dark);
+  background: var(--color-accent);
   color: white;
-  border-color: var(--accent-dark);
+  border-color: var(--color-accent);
 }
 .mixitup-container {
   grid-template-rows: auto;
 }
 .work-action-btn {
-  @apply w-10 h-10 p-3 mb-2 bg-white text-color-light rounded-full shadow-md transform transition-transform ease-in-expo -translate-x-full group-hover:translate-x-3 hover:bg-accent-light hover:text-white;
+  @apply w-10 h-10 p-3 mb-2 bg-white text-color-light rounded-full shadow-md transform transition-transform ease-in-expo -translate-x-full group-hover:translate-x-3 hover:bg-color-accent hover:text-white;
 }
 </style>

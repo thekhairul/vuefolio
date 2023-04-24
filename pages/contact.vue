@@ -1,28 +1,14 @@
 <template>
-  <div id="contact" class="contact bg-white h-full overflow-y-auto page-root">
+  <div
+    id="contact"
+    class="contact bg-color-light dark:bg-color-dark h-full overflow-y-auto page-root"
+  >
     <div
-      class="
-        page-header
-        relative
-        h-80
-        max-h-80
-        flex flex-col
-        items-center
-        justify-center
-        md:p-5
-      "
+      class="page-header relative h-80 max-h-80 flex flex-col items-center justify-center md:p-5"
     >
       <h2
         ref="headerText"
-        class="
-          page-header__text
-          text-yellow-300 text-2xl
-          lg:text-6xl
-          text-center
-          lg:text-left
-          mb-2
-          font-bold
-        "
+        class="page-header__text text-yellow-300 text-2xl lg:text-6xl text-center lg:text-left mb-2 font-bold"
       >
         <span class="anim-letter">C</span>
         <span class="anim-letter">O</span>
@@ -35,14 +21,7 @@
       </h2>
       <p
         ref="headerPara"
-        class="
-          text-white text-center
-          lg:text-left
-          font-light
-          tracking-widest
-          anim-para
-          opacity-0
-        "
+        class="text-white text-center lg:text-left font-light tracking-widest anim-para opacity-0"
       >
         Say hello! Stay in touch <span class="text-2xl">&#128578;</span>
       </p>
@@ -64,19 +43,19 @@
               >Bashundhara R/A, Dhaka, Bangladesh</span
             >
           </p>
-          <p class="text-gray-600 hover:text-accent-light not-italic mb-2">
+          <p class="text-gray-600 hover:text-color-accent not-italic mb-2">
             <fa :icon="['fas', 'phone-alt']" />
             <a
               href="tel:8801799582488"
-              class="font-light hover:text-accent-light ml-2"
+              class="font-light hover:text-color-accent ml-2"
               >8801799582488</a
             >
           </p>
-          <p class="text-gray-600 hover:text-accent-light not-italic mb-2">
+          <p class="text-gray-600 hover:text-color-accent not-italic mb-2">
             <fa :icon="['fas', 'envelope']" />
             <a
               href="mailto:thekhairul.office@gmail.com"
-              class="font-light hover:text-accent-light ml-2"
+              class="font-light hover:text-color-accent ml-2"
               >thekhairul.office@gmail.com</a
             >
           </p>
@@ -89,7 +68,7 @@
             v-model="honeypot"
             type="text"
             name="honeypot"
-            style="display: none;"
+            style="display: none"
           />
           <legend class="mb-4">
             <h2 class="text-color-light font-extrabold text-3xl mb-2">
@@ -108,7 +87,7 @@
               v-model="name"
               type="text"
               name="name"
-              class="rounded-3xl bg-gray-100 px-4 py-2 focus:outline-accent-light"
+              class="rounded-3xl text-color-dark dark:text-color-light bg-gray-200 dark:bg-background-dark px-4 py-2 focus:outline-color-accent"
             />
           </div>
 
@@ -121,7 +100,7 @@
               v-model="email"
               type="email"
               name="email"
-              class="w-full max-w-xs rounded-3xl bg-gray-100 px-4 py-2"
+              class="w-full max-w-xs rounded-3xl text-color-dark dark:text-color-light bg-gray-200 dark:bg-background-dark px-4 py-2"
               required
             />
           </div>
@@ -135,13 +114,13 @@
               v-model="message"
               name="message"
               rows="6"
-              class="w-full rounded-3xl bg-gray-100 px-4 py-2"
+              class="w-full rounded-3xl text-color-dark dark:text-color-light bg-gray-200 dark:bg-background-dark px-4 py-2"
               required
             />
           </div>
 
           <button
-            class="bg-accent-dark rounded-3xl shadow-lg px-4 py-2 text-white font-bold uppercase tracking-widest"
+            class="bg-color-accent rounded-3xl shadow-lg px-4 py-2 text-white font-bold uppercase tracking-widest"
             type="submit"
           >
             <fa v-if="isFormSubmitting" :icon="['fas', 'spinner']" spin />
@@ -166,7 +145,7 @@ export default {
       email: '',
       message: '',
       honeypot: '',
-      isFormSubmitting: false
+      isFormSubmitting: false,
     };
   },
   mounted() {
@@ -182,12 +161,12 @@ export default {
         honeypot: this.honeypot, // if any value received in this field, form submission will be ignored.
         message: this.message,
         replyTo: '@', // this will set replyTo of email to email address entered in the form
-        accessKey: 'f6fa7901-075a-4742-82d3-c14602c30221'
+        accessKey: 'f6fa7901-075a-4742-82d3-c14602c30221',
       };
 
       this.$axios
         .$post('https://api.staticforms.xyz/submit', JSON.stringify(body), {
-          headers: { 'Content-Type': 'application/json' }
+          headers: { 'Content-Type': 'application/json' },
         })
         .then(res => {
           this.name = '';
@@ -197,7 +176,7 @@ export default {
             title: 'Success!',
             text: 'Got the message. Will get back to you ASAP',
             type: 'success',
-            duration: 5000
+            duration: 5000,
           });
         })
         .catch(err => {
@@ -205,14 +184,14 @@ export default {
             title: 'Failed!',
             text: err.message,
             type: 'error',
-            duration: 5000
+            duration: 5000,
           });
         })
         .finally(() => {
           this.isFormSubmitting = false;
         });
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -229,7 +208,7 @@ export default {
       position: absolute;
       inset: 0;
       z-index: -1;
-      background-color: rgba($background-dark, 0.6);
+      background-color: rgba($background-dark, 0.8);
     }
   }
 }

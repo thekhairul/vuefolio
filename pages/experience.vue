@@ -1,32 +1,14 @@
 <template>
   <div
     id="experience"
-    class="experience bg-gray-50 h-full overflow-y-auto page-root"
+    class="experience bg-color-light dark:bg-color-dark h-full overflow-y-auto page-root"
   >
     <div
-      class="
-        page-header
-        relative
-        h-80
-        max-h-80
-        flex flex-col
-        items-center
-        justify-center
-        bg-background-dark
-        md:p-5
-      "
+      class="page-header relative h-80 max-h-80 flex flex-col items-center justify-center bg-background-dark md:p-5"
     >
       <h2
         ref="headerText"
-        class="
-          page-header__text
-          text-yellow-300 text-2xl
-          lg:text-6xl
-          text-center
-          lg:text-left
-          mb-2
-          font-bold
-        "
+        class="page-header__text text-yellow-300 text-2xl lg:text-6xl text-center lg:text-left mb-2 font-bold"
       >
         <span class="anim-letter">E</span>
         <span class="anim-letter">X</span>
@@ -42,14 +24,7 @@
       </h2>
       <p
         ref="headerPara"
-        class="
-          text-white text-center
-          lg:text-left
-          font-light
-          tracking-widest
-          anim-para
-          opacity-0
-        "
+        class="text-white text-center lg:text-left font-light tracking-widest anim-para opacity-0"
       >
         Breathe, sleep, code, repeat.
       </p>
@@ -57,23 +32,21 @@
 
     <div class="experience-main p-5">
       <div class="jobs mb-8">
-        <h2 class="text-accent-light font-semibold text-2xl mb-3">
+        <h2 class="text-color-accent font-semibold text-2xl mb-3">
           job experience
         </h2>
         <experience-card :cards="jobs" />
       </div>
 
       <div class="certificates mb-8">
-        <h2 class="text-accent-light font-semibold text-2xl mb-3">
+        <h2 class="text-color-accent font-semibold text-2xl mb-3">
           certificates
         </h2>
         <experience-card :cards="certificates" />
       </div>
 
       <div class="badges mb-8">
-        <h2 class="text-accent-light font-semibold text-2xl mb-3">
-          badges
-        </h2>
+        <h2 class="text-color-accent font-semibold text-2xl mb-3">badges</h2>
 
         <div class="flex flex-wrap md:flex-nowrap gap-4">
           <div class="flex flex-col w-full md:w-auto rounded-xl">
@@ -116,11 +89,11 @@ export default {
   data() {
     return {
       jobs,
-      certificates
+      certificates,
     };
   },
   mounted() {
     this.animateHeader();
-  }
+  },
 };
 </script>

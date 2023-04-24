@@ -1,5 +1,5 @@
 *:focus {
-  outline-color: var(--accent-dark);
+  outline-color: var(--color-accent);
 }
 button:focus {
   outline: none;
@@ -14,7 +14,7 @@ p,
 a,
 button {
   font-family: 'Poppins', 'sans-serif';
-  color: var(--color-light);
+  color: var(--color-dark);
 }
 
 .dark {
@@ -28,10 +28,10 @@ button {
   a,
   span,
   button {
-    color: var(--color-dark);
+    color: var(--color-light);
   }
 }
 
 .nuxt-link-exact-active {
-  color: var(--accent-dark) !important;
+  color: var(--color-accent) !important;
 }

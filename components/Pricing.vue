@@ -1,9 +1,7 @@
 <template>
   <div class="flex flex-wrap -mx-2">
     <div class="w-full sm:w-1/2 md:w-1/4 px-2 mb-4 flex flex-col">
-      <h2 class="text-accent-light font-semibold text-2xl mb-3">
-        pricing
-      </h2>
+      <h2 class="text-color-accent font-semibold text-2xl mb-3">pricing</h2>
       <p class="text-color-light text-md font-light">
         The price here is just for a rough estimation. It will certainly vary
         based on the nature of a project. Let's finalize the price upon
@@ -16,24 +14,26 @@
       class="w-full sm:w-1/2 md:w-1/4 px-2 mb-4"
     >
       <div
-        class="h-full p-4 flex flex-col items-center justify-center pricing-card border shadow-lg rounded-xl bg-white"
+        class="h-full p-4 flex flex-col items-center justify-center pricing-card shadow-lg rounded-xl bg-background-light dark:bg-background-dark"
       >
         <component :is="model.thumb" class="w-20 h-20 mb-3"></component>
-        <h3 class="text-color-light font-semibold text-lg mb-4">
+        <h3
+          class="text-color-dark dark:text-color-light font-semibold text-lg mb-4"
+        >
           {{ model.type }}
         </h3>
         <ul class="pricing-items mb-4">
           <li
             v-for="(feature, id) in features"
             :key="id"
-            class="text-sm text-color-light mb-2"
+            class="text-sm text-color-dark dark:text-color-light mb-2"
             :class="{ 'opacity-40': !model.featureIds.includes(id) }"
           >
             {{ feature }}
           </li>
         </ul>
         <h5>
-          <span class="font-bold text-accent-dark text-2xl"
+          <span class="font-bold text-color-accent text-2xl"
             >${{ model.price }}</span
           >
           <span class="font-light">/hour</span>
@@ -44,9 +44,9 @@
 </template>
 
 <script>
+import moneyIcon from '~/assets/images/money-bag.svg?inline';
 import progressIcon from '~/assets/images/progress-point.svg?inline';
 import projectIcon from '~/assets/images/project.svg?inline';
-import moneyIcon from '~/assets/images/money-bag.svg?inline';
 
 export default {
   name: 'Pricing',
@@ -60,30 +60,30 @@ export default {
         'API Integration',
         'SSR (Nuxt/Next)',
         'Documentation',
-        'PWA'
+        'PWA',
       ],
       priceModels: [
         {
           thumb: 'progress-icon',
           type: 'Basic',
           price: 15,
-          featureIds: [0, 1]
+          featureIds: [0, 1],
         },
         {
           thumb: 'project-icon',
           type: 'Pro',
           price: 25,
-          featureIds: [0, 1, 2, 3]
+          featureIds: [0, 1, 2, 3],
         },
         {
           thumb: 'money-icon',
           type: 'Advanced',
           price: 35,
-          featureIds: [0, 1, 2, 3, 4, 5, 6]
-        }
-      ]
+          featureIds: [0, 1, 2, 3, 4, 5, 6],
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 

@@ -1,55 +1,23 @@
 <template>
   <div
     id="home"
-    class="
-      home
-      bg-background-light
-      dark:bg-background-dark
-      h-full
-      overflow-y-auto
-      page-root
-    "
+    class="home bg-color-light dark:bg-color-dark h-full overflow-y-auto page-root"
   >
     <div
-      class="
-        page-header
-        relative
-        h-80
-        max-h-80
-        flex flex-wrap
-        items-center
-        justify-center
-        bg-background-dark
-        p-5
-      "
+      class="page-header relative h-80 max-h-80 flex flex-wrap items-center justify-center bg-background-dark p-5"
     >
       <figure class="home-avatar my-2 lg:order-1">
         <img
           ref="homeAvatar"
           :src="require(`~/assets/images/avatar.png`)"
           alt=""
-          class="
-            w-28
-            h-28
-            lg:w-36 lg:h-36
-            mx-2
-            rounded-full
-            object-cover object-right
-          "
+          class="w-28 h-28 lg:w-36 lg:h-36 mx-2 rounded-full object-cover object-right"
         />
       </figure>
       <div class="page-header__brief w-full lg:w-1/2">
         <h2
           ref="headerText"
-          class="
-            page-header__text
-            text-2xl
-            lg:text-6xl
-            text-center
-            lg:text-left
-            mb-2
-            font-bold
-          "
+          class="page-header__text text-2xl lg:text-6xl text-center lg:text-left mb-2 font-bold"
         >
           <span class="anim-letter">H</span>
           <span class="anim-letter">O</span>
@@ -59,14 +27,7 @@
         </h2>
         <p
           ref="headerPara"
-          class="
-            text-white text-center
-            lg:text-left
-            font-light
-            tracking-widest
-            anim-para
-            opacity-0
-          "
+          class="text-white text-center lg:text-left font-light tracking-widest anim-para opacity-0"
         >
           I am <i>Khairul Anik</i>, a Frontend developer based in Dhaka. I
           usually build web interfaces with VUE &amp; React &#128151;
@@ -75,7 +36,7 @@
     </div>
     <div class="home-main p-5">
       <div class="service mb-8">
-        <h2 class="text-accent-light font-semibold text-2xl mb-3">
+        <h2 class="text-color-accent font-semibold text-2xl mb-3">
           my services
         </h2>
         <services />
@@ -86,7 +47,7 @@
       </div>
 
       <div class="service mb-8">
-        <h2 class="text-accent-light font-semibold text-2xl mb-3">
+        <h2 class="text-color-accent font-semibold text-2xl mb-3">
           recommendation
         </h2>
         <testimonial />
@@ -107,7 +68,7 @@ export default {
     this.animateHeader();
 
     VanillaTilt.init(this.$refs.homeAvatar, { scale: 1.2 });
-  }
+  },
 };
 </script>
 

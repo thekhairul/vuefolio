@@ -1,17 +1,12 @@
 <template>
   <div
     class="lg:container flex h-screen lg:mx-auto lg:rounded overflow-x-hidden relative"
+    :class="{ dark: theme === 'dark' }"
   >
     <sidebar-primary />
     <div
-      class="
-        overflow-x-hidden
-        sidebar-wrapper
-        h-full
-        w-64
-        absolute
-        z-10
-      "
+      class="overflow-x-hidden sidebar-wrapper h-full w-64 absolute z-10"
+      :class="{ 'bg-color-light dark:bg-color-dark': sidebarOpen }"
     >
       <transition
         :css="false"
@@ -23,14 +18,7 @@
       </transition>
     </div>
     <main
-      class="
-        app-body
-        flex-grow
-        shadow-lg
-        relative
-        z-10
-        overflow-hidden
-      "
+      class="app-body flex-grow shadow-lg relative z-10 overflow-hidden"
       :class="{ 'sidebar-open': sidebarOpen }"
     >
       <Nuxt />
@@ -40,10 +28,24 @@
 
 <script>
 export default {
+  data() {
+    let theme = 'dark';
+    if (typeof window !== 'undefined') {
+      theme = localStorage.getItem('khairul:vuefolio:theme');
+    }
+    return {
+      theme,
+    };
+  },
   computed: {
     sidebarOpen() {
       return this.$store.state.isSidebarOpen;
-    }
+    },
+  },
+  mounted() {
+    this.$root.$on('theme-change', val => {
+      this.theme = val;
+    });
   },
   methods: {
     enterElement(el, done) {
@@ -52,7 +54,7 @@ export default {
         translateX: ['-100%', 0],
         easing: 'easeInOutSine',
         duration: 500,
-        complete: done
+        complete: done,
       });
     },
     leaveElement(el, done) {
@@ -61,10 +63,10 @@ export default {
         translateX: [0, '-100%'],
         easing: 'easeInOutSine',
         duration: 500,
-        complete: done
+        complete: done,
       });
-    }
-  }
+    },
+  },
 };
 </script>
 

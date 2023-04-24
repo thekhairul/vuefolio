@@ -1,7 +1,7 @@
 <template>
   <ul class="max-w-4xl experience-card">
     <li v-for="(card, idx) in cards" :key="idx" class="pl-4 mb-4">
-      <h5 class="mb-2 text-accent-dark tracking-wider">
+      <h5 class="mb-2 text-color-accent tracking-wider">
         {{ card.period }}
       </h5>
 
@@ -34,9 +34,9 @@ export default {
   props: {
     cards: {
       type: Array,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 };
 </script>
 
@@ -50,7 +50,7 @@ export default {
     top: 6px;
     bottom: 0;
     width: 1px;
-    background: var(--accent-light);
+    background: var(--color-accent);
   }
   li {
     position: relative;
@@ -61,7 +61,7 @@ export default {
       top: 6px;
       width: 10px;
       height: 10px;
-      background: var(--accent-light);
+      background: var(--color-accent);
       border-radius: 50%;
     }
   }

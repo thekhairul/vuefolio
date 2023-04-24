@@ -11,7 +11,7 @@
         >
           <component :is="slide.icon" class="w-16 h-16 mb-2"></component>
           <h2
-            class="text-color-light text-center text-sm font-semibold tracking-widest"
+            class="text-color-dark dark:text-color-light text-center text-sm font-semibold tracking-widest"
           >
             {{ slide.title }}
           </h2>
@@ -31,12 +31,12 @@
 </template>
 
 <script>
-import SpaIcon from '~/assets/images/spa.svg?inline';
-import RwdIcon from '~/assets/images/rwd.svg?inline';
-import PsdIcon from '~/assets/images/psd.svg?inline';
-import ShopifyIcon from '~/assets/images/shopify.svg?inline';
 import ApiIcon from '~/assets/images/api.svg?inline';
 import EcommerceIcon from '~/assets/images/ecommerce.svg?inline';
+import PsdIcon from '~/assets/images/psd.svg?inline';
+import RwdIcon from '~/assets/images/rwd.svg?inline';
+import ShopifyIcon from '~/assets/images/shopify.svg?inline';
+import SpaIcon from '~/assets/images/spa.svg?inline';
 
 export default {
   name: 'Services',
@@ -46,7 +46,7 @@ export default {
     PsdIcon,
     ShopifyIcon,
     ApiIcon,
-    EcommerceIcon
+    EcommerceIcon,
   },
   data() {
     const vue = this;
@@ -57,16 +57,16 @@ export default {
         breakpoints: {
           // when window width is >= 640px
           640: {
-            slidesPerView: 2
+            slidesPerView: 2,
           },
           // when window width is >= 992px
           992: {
-            slidesPerView: 4
-          }
+            slidesPerView: 4,
+          },
         },
         navigation: {
           nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
+          prevEl: '.swiper-button-prev',
         },
         on: {
           init() {
@@ -76,39 +76,39 @@ export default {
               opacity: [0, 1],
               easing: 'easeInOutSine',
               duration: 600,
-              delay: vue.$anime.stagger(200)
+              delay: vue.$anime.stagger(200),
             });
-          }
-        }
+          },
+        },
       },
       swiperSlides: [
         {
           icon: 'spa-icon',
-          title: 'Single Page Application'
+          title: 'Single Page Application',
         },
         {
           icon: 'rwd-icon',
-          title: 'Responsive Web Design'
+          title: 'Responsive Web Design',
         },
         {
           icon: 'psd-icon',
-          title: 'PSD/Figma/XD to HTML'
+          title: 'PSD/Figma/XD to HTML',
         },
         {
           icon: 'shopify-icon',
-          title: 'Shopify Storefront Theme'
+          title: 'Shopify Storefront Theme',
         },
         {
           icon: 'api-icon',
-          title: 'API integration'
+          title: 'API integration',
         },
         {
           icon: 'ecommerce-icon',
-          title: 'Ecommerce Storefront'
-        }
-      ]
+          title: 'Ecommerce Storefront',
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 

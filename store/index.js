@@ -1,9 +1,9 @@
 export const state = () => ({
-  isSidebarOpen: false
+  isSidebarOpen: false,
 });
 
 export const mutations = {
   toggleSidebar(state, shouldOpen) {
     state.isSidebarOpen = shouldOpen;
-  }
+  },
 };

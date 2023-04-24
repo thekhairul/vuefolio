@@ -5,18 +5,13 @@
     :class="{
       'justify-start': align === 'left',
       'justify-center': align === 'center',
-      'justify-end': align === 'right'
+      'justify-end': align === 'right',
     }"
   >
     <li v-for="(media, idx) in socialMedias" :key="idx" class="p-2">
       <a
         :href="media.url"
-        class="
-          text-accent-dark
-          dark:text-accent-dark
-          hover:text-green-600
-          text-2xl
-        "
+        class="text-color-accent dark:text-color-accent hover:text-green-600 text-2xl"
         target="_blank"
         :data-tooltip="media.name"
       >
@@ -32,8 +27,8 @@ export default {
     align: {
       type: String,
       default: 'center',
-      validator: val => ['left', 'center', 'right'].includes(val)
-    }
+      validator: val => ['left', 'center', 'right'].includes(val),
+    },
   },
   data() {
     return {
@@ -41,21 +36,21 @@ export default {
         {
           name: 'facebook',
           url: 'https://www.facebook.com/khairulislam.anik.77',
-          icon: 'facebook'
+          icon: 'facebook',
         },
         {
           name: 'github',
           url: 'https://github.com/thekhairul',
-          icon: 'github'
+          icon: 'github',
         },
         {
           name: 'linkedin',
           url: 'https://www.linkedin.com/in/khairulanik/',
-          icon: 'linkedin'
-        }
-      ]
+          icon: 'linkedin',
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 

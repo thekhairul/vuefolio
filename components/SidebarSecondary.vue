@@ -1,14 +1,7 @@
 <template>
-  <aside
-    id="intro"
-    class="
-      sidebar
-      flex flex-col
-      h-full
-    "
-  >
+  <aside id="intro" class="sidebar flex flex-col h-full">
     <div
-      class="sidebar-avatar text-center p-4 bg-gray-50 border-b dark:border-gray-500"
+      class="sidebar-avatar text-center p-4 bg-gray-50 dark:bg-background-darker border-b dark:border-gray-500"
     >
       <img
         ref="avatar"
@@ -24,7 +17,7 @@
     </div>
 
     <div
-      class="flex flex-col h-full justify-between max-h-full pt-3 bg-background-light dark:bg-background-dark"
+      class="flex flex-col h-full justify-between max-h-full pt-3 bg-background-light dark:bg-background-darker"
     >
       <div class="flex-grow">
         <div class="px-4 mb-4">
@@ -46,41 +39,27 @@
 
       <div class="flex border-t dark:border-gray-500 h-16">
         <div
-          class="
-            en
-            flex-1 flex flex-col
-            justify-center
-            items-center
-            border-r
-            dark:border-gray-500
-          "
+          class="en flex-1 flex flex-col justify-center items-center border-r dark:border-gray-500"
           data-tooltip="English"
         >
           <progress-ring
             :radius="25"
             :progress="75"
             :stroke="4"
-            stroke-color="var(--accent-dark)"
+            stroke-color="var(--color-accent)"
             fill-color="rgba(16, 185, 129, 0.7)"
             label="En"
           />
         </div>
         <div
-          class="
-            bn
-            flex-1 flex
-            justify-center
-            items-center
-            border-r
-            dark:border-gray-500
-          "
+          class="bn flex-1 flex justify-center items-center border-r dark:border-gray-500"
           data-tooltip="Bangla"
         >
           <progress-ring
             :radius="25"
             :progress="100"
             :stroke="4"
-            stroke-color="var(--accent-dark)"
+            stroke-color="var(--color-accent)"
             fill-color="rgba(16, 185, 129, 0.7)"
             label="Bn"
           />
@@ -93,7 +72,7 @@
             :radius="25"
             :progress="50"
             :stroke="4"
-            stroke-color="var(--accent-dark)"
+            stroke-color="var(--color-accent)"
             fill-color="rgba(16, 185, 129, 0.7)"
             label="Hn"
           />
@@ -113,15 +92,6 @@ export default {
       this.$store.commit('toggleSidebar', true);
     }
     VanillaTilt.init(this.$refs.avatar, { scale: 1.2 });
-  }
+  },
 };
 </script>
-
-<style lang="scss">
-.sidebar {
-  box-shadow: 20px 0px 0px var(--background-light);
-  &-avatar {
-    background: rgba(255, 255, 255, 0.9);
-  }
-}
-</style>

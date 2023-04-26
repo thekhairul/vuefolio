@@ -27,10 +27,6 @@
           <h4 class="font-extralight">
             <b class="font-medium">City:</b> Dhaka
           </h4>
-          <!-- <h4 class="font-extralight">
-            <b class="font-medium">Age:</b>
-            {{ new Date().getFullYear() - 1993 }}
-          </h4> -->
           <hr class="mt-4 dark:border-gray-500" />
         </div>
 
@@ -88,9 +84,6 @@ import VanillaTilt from 'vanilla-tilt';
 export default {
   name: 'SidebarSecondary',
   mounted() {
-    if (window.innerWidth > 1440) {
-      this.$store.commit('toggleSidebar', true);
-    }
     VanillaTilt.init(this.$refs.avatar, { scale: 1.2 });
   },
 };

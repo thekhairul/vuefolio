@@ -23,6 +23,10 @@ module.exports = {
         'in-expo': 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
         'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
       },
+      fontFamily: {
+        ptsans: ['PT Sans', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+      },
     },
   },
   variants: {

@@ -19,10 +19,13 @@
       </div>
     </div>
     <div class="swiper-button-prev">
-      <fa :icon="['fas', 'arrow-circle-left']" class="text-gray-400 text-2xl" />
+      <font-awesome-icon
+        :icon="['fas', 'arrow-circle-left']"
+        class="text-gray-400 text-2xl"
+      />
     </div>
     <div class="swiper-button-next">
-      <fa
+      <font-awesome-icon
         :icon="['fas', 'arrow-circle-right']"
         class="text-gray-400 text-2xl"
       />

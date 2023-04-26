@@ -47,7 +47,7 @@
         data-tooltip="Resume"
         data-tooltip-conf="right"
       >
-        <fa
+        <font-awesome-icon
           :icon="['fas', 'cloud-download-alt']"
           class="text-green-500 text-2xl"
         />

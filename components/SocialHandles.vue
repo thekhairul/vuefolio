@@ -15,7 +15,7 @@
         target="_blank"
         :data-tooltip="media.name"
       >
-        <fa :icon="['fab', media.icon]"></fa>
+        <font-awesome-icon :icon="['fab', media.icon]" />
       </a>
     </li>
   </ul>

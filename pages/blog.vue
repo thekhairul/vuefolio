@@ -1,7 +1,7 @@
 <template>
   <div
     id="blog"
-    class="blog bg-color-light dark:bg-color-dark h-full overflow-y-auto page-root"
+    class="blog bg-color-light dark:bg-color-dark h-full overflow-y-auto page-root overflow-x-hidden"
   >
     <div
       class="page-header relative h-80 max-h-80 flex flex-col items-center justify-center bg-background-dark md:p-5"

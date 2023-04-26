@@ -1,7 +1,7 @@
 <template>
   <div
     id="contact"
-    class="contact bg-color-light dark:bg-color-dark h-full overflow-y-auto page-root"
+    class="contact bg-color-light dark:bg-color-dark h-full overflow-y-auto page-root overflow-x-hidden"
   >
     <div
       class="page-header relative h-80 max-h-80 flex flex-col items-center justify-center md:p-5"
@@ -38,13 +38,13 @@
         />
         <address>
           <p class="text-gray-600 not-italic mb-2">
-            <fa :icon="['fas', 'map-marker-alt']" />
+            <font-awesome-icon :icon="['fas', 'map-marker-alt']" />
             <span class="font-light ml-2"
               >Bashundhara R/A, Dhaka, Bangladesh</span
             >
           </p>
           <p class="text-gray-600 hover:text-color-accent not-italic mb-2">
-            <fa :icon="['fas', 'phone-alt']" />
+            <font-awesome-icon :icon="['fas', 'phone-alt']" />
             <a
               href="tel:8801799582488"
               class="font-light hover:text-color-accent ml-2"
@@ -52,7 +52,7 @@
             >
           </p>
           <p class="text-gray-600 hover:text-color-accent not-italic mb-2">
-            <fa :icon="['fas', 'envelope']" />
+            <font-awesome-icon :icon="['fas', 'envelope']" />
             <a
               href="mailto:thekhairul.office@gmail.com"
               class="font-light hover:text-color-accent ml-2"
@@ -123,7 +123,11 @@
             class="bg-color-accent rounded-3xl shadow-lg px-4 py-2 text-white font-bold uppercase tracking-widest"
             type="submit"
           >
-            <fa v-if="isFormSubmitting" :icon="['fas', 'spinner']" spin />
+            <font-awesome-icon
+              v-if="isFormSubmitting"
+              :icon="['fas', 'spinner']"
+              spin
+            />
             <span v-else>Send Message</span>
           </button>
         </form>

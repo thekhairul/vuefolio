@@ -1,7 +1,7 @@
 <template>
   <div
     id="work"
-    class="work bg-color-light dark:bg-color-dark h-full overflow-y-auto page-root"
+    class="work bg-color-light dark:bg-color-dark h-full overflow-y-auto page-root overflow-x-hidden"
   >
     <div
       class="page-header relative h-80 max-h-80 flex flex-col items-center justify-center bg-background-dark p-5"
@@ -24,33 +24,31 @@
       </p>
     </div>
     <div class="work-main">
-      <div
-        class="controls shadow-lg mx-auto my-6 overflow-hidden rounded-full table"
-      >
+      <div class="controls mx-auto my-6 overflow-hidden table">
         <button
           type="button"
-          class="control text-sm md:text-xl text-gray-500 px-2 md:px-4 py-2 bg-whie border-r"
+          class="control text-sm md:text-lg text-color-dark dark:text-color-light px-2 md:px-4 py-2"
           data-filter="all"
         >
           All
         </button>
         <button
           type="button"
-          class="control text-sm md:text-xl text-gray-500 px-2 md:px-4 py-2 bg-whie border-r"
+          class="control text-sm md:text-lg text-color-dark dark:text-color-light px-2 md:px-4 py-2"
           data-filter=".react"
         >
           React
         </button>
         <button
           type="button"
-          class="control text-sm md:text-xl text-gray-500 px-2 md:px-4 py-2 bg-whie border-r"
+          class="control text-sm md:text-lg text-color-dark dark:text-color-light px-2 md:px-4 py-2"
           data-filter=".vue"
         >
           Vue
         </button>
         <button
           type="button"
-          class="control text-sm md:text-xl text-gray-500 px-2 md:px-4 py-2 bg-whie"
+          class="control text-sm md:text-lg text-color-dark dark:text-color-light px-2 md:px-4 py-2"
           data-filter=".node"
         >
           Node
@@ -58,59 +56,63 @@
       </div>
       <div
         ref="mixitupContainer"
-        class="mixitup-container overflow-hidden p-2 md:p-5 columns-3 gap-4"
+        class="mixitup-container flex flex-wrap gap-4 overflow-hidden p-4 md:p-8"
       >
         <div v-for="(work, idx) in works" :key="idx" :class="work.class">
-          <img
-            :src="require(`@/assets/images/${work.image}`)"
-            :alt="work.title"
-            class="filter group-hover:brightness-50"
-            :class="work.imageClass"
-          />
-          <div class="bg-white p-4" :class="work.contentClass">
-            <a
-              :href="work.demoLink || work.sourceLink || '#'"
-              target="_blank"
-              class="block text-color-accent text-2xl mb-2"
-            >
-              {{ work.title }}
-            </a>
-            <ul class="flex flex-wrap mb-3">
-              <li v-for="(tag, id) in work.tags" :key="id" class="mr-1 mb-1">
-                <a
-                  :href="tag.link"
-                  target="_blank"
-                  class="inline-block px-2 py-1 rounded-md transition-colors bg-color-accent text-color-accent font-light cursor-pointer"
-                  >{{ tag.name }}</a
-                >
-              </li>
-            </ul>
-            <p class="text-sm text-color-light">{{ work.brief }}</p>
-            <div class="flex flex-col absolute top-0 left-0 mt-3">
+          <figure
+            v-if="work.image"
+            class="w-full md:w-1/2 mb-4 relative rounded-lg overflow-hidden group"
+          >
+            <img
+              :src="require(`@/assets/images/${work.image}`)"
+              alt=""
+              class="w-full"
+            />
+            <figcaption
+              class="absolute inset-0 bg-color-dark opacity-50 group-hover:hidden"
+            ></figcaption>
+          </figure>
+          <div :class="work.layoutClass">
+            <div class="flex items-center gap-4">
+              <h2
+                class="flex-grow text-2xl text-color-dark dark:text-color-light"
+              >
+                {{ work.title }}
+              </h2>
               <a
                 :href="work.sourceLink || '#'"
                 target="_blank"
                 data-tooltip="Source code"
-                data-tooltip-conf="right"
-                class="work-action-btn"
-                :class="{
-                  'cursor-not-allowed pointer-events-none': !work.sourceLink,
-                }"
+                class="text-xl text-color-dark hover:text-color-accent dark:text-color-light"
+                :class="{ 'no-click': !work.sourceLink }"
               >
-                <code-icon />
+                <font-awesome-icon :icon="['fab', 'github']" />
               </a>
               <a
                 :href="work.demoLink || '#'"
                 target="_blank"
-                data-tooltip="Live preview"
-                data-tooltip-conf="right"
-                class="work-action-btn delay-75"
-                :class="{
-                  'cursor-not-allowed pointer-events-none': !work.demoLink,
-                }"
-                ><preview-icon
-              /></a>
+                data-tooltip="Live"
+                class="text-xl text-color-dark hover:text-color-accent dark:text-color-light"
+                :class="{ 'no-click': !work.demoLink }"
+              >
+                <font-awesome-icon :icon="['fas', 'external-link-alt']" />
+              </a>
             </div>
+            <div :class="work.contentClass">
+              <p
+                class="text-color-dark dark:text-color-light tracking-wide leading-loose opacity-70"
+                v-html="work.brief"
+              ></p>
+            </div>
+            <ul class="inline-flex gap-4 items-center">
+              <li
+                v-for="tag in work.tags"
+                :key="tag"
+                class="font-ptsans text-color-accent text-sm tracking-wider"
+              >
+                {{ tag.name }}
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -119,13 +121,10 @@
 </template>
 
 <script>
-import CodeIcon from '~/assets/images/link.svg?inline';
-import PreviewIcon from '~/assets/images/preview-line.svg?inline';
 import works from '~/data/work';
 import pageMixin from '~/mixins/page';
 
 export default {
-  components: { CodeIcon, PreviewIcon },
   mixins: [pageMixin],
   transition: { name: 'transform3d', mode: '' },
   data() {
@@ -142,12 +141,7 @@ export default {
 
 <style lang="scss">
 .mixitup-control-active {
-  background: var(--color-accent);
-  color: white;
-  border-color: var(--color-accent);
-}
-.mixitup-container {
-  grid-template-rows: auto;
+  color: var(--color-accent) !important;
 }
 .work-action-btn {
   @apply w-10 h-10 p-3 mb-2 bg-white text-color-light rounded-full shadow-md transform transition-transform ease-in-expo -translate-x-full group-hover:translate-x-3 hover:bg-color-accent hover:text-white;

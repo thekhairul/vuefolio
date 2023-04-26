@@ -1,7 +1,7 @@
 <template>
   <div
     id="experience"
-    class="experience bg-color-light dark:bg-color-dark h-full overflow-y-auto page-root"
+    class="experience bg-color-light dark:bg-color-dark h-full overflow-y-auto page-root overflow-x-hidden"
   >
     <div
       class="page-header relative h-80 max-h-80 flex flex-col items-center justify-center bg-background-dark md:p-5"
@@ -56,7 +56,11 @@
               class="md:max-w-xs rounded-t-2xl object-cover object-center"
             />
             <div class="p-4 rounded-b-2xl shadow-xl">
-              <h3 class="text-color-light font-semibold text-xl">Vue Expert</h3>
+              <h3
+                class="text-color-dark dark:text-color-light font-semibold text-xl"
+              >
+                Vue Expert
+              </h3>
             </div>
           </div>
 
@@ -67,7 +71,9 @@
               class="md:max-w-xs rounded-t-2xl object-cover object-center"
             />
             <div class="p-4 rounded-b-2xl shadow-xl">
-              <h3 class="text-color-light font-semibold text-xl">
+              <h3
+                class="text-color-dark dark:text-color-light font-semibold text-xl"
+              >
                 React Expert
               </h3>
             </div>

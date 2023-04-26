@@ -16,11 +16,13 @@
         >
           {{ card.companyName }}
         </a>
-        <h6 class="text-color-light tracking-wide mb-3 italic opacity-70">
+        <h6
+          class="text-color-dark dark:text-color-light tracking-wide mb-3 italic opacity-70"
+        >
           {{ card.companyAddress }}
         </h6>
         <ul
-          class="text-color-light list-disc list-inside"
+          class="text-color-dark dark:text-color-light list-disc list-inside"
           v-html="card.description"
         ></ul>
       </div>

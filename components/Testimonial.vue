@@ -9,7 +9,7 @@
         <div
           class="testimonial-card p-8 rounded-xl bg-gray-50 dark:bg-background-dark shadow relative flex flex-col items-center justify-center"
         >
-          <fa
+          <font-awesome-icon
             :icon="['fas', 'quote-left']"
             class="testimonial-quote text-gray-400 text-4xl opacity-50 absolute"
           />
@@ -31,10 +31,13 @@
       </div>
     </div>
     <div class="swiper-button-prev">
-      <fa :icon="['fas', 'arrow-circle-left']" class="text-gray-400 text-2xl" />
+      <font-awesome-icon
+        :icon="['fas', 'arrow-circle-left']"
+        class="text-gray-400 text-2xl"
+      />
     </div>
     <div class="swiper-button-next">
-      <fa
+      <font-awesome-icon
         :icon="['fas', 'arrow-circle-right']"
         class="text-gray-400 text-2xl"
       />
@@ -56,12 +59,12 @@ export default {
         breakpoints: {
           // when window width is >= 640px
           640: {
-            slidesPerView: 2
-          }
+            slidesPerView: 2,
+          },
         },
         navigation: {
           nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
+          prevEl: '.swiper-button-prev',
         },
         on: {
           init() {
@@ -71,42 +74,39 @@ export default {
               opacity: [0, 1],
               easing: 'easeInOutSine',
               duration: 600,
-              delay: vue.$anime.stagger(200)
+              delay: vue.$anime.stagger(200),
             });
-          }
-        }
+          },
+        },
       },
       testimonials: [
         {
           avatar: 'user.svg',
-          msg:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio consequatur doloremque assumenda eligendi harum voluptas?',
+          msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio consequatur doloremque assumenda eligendi harum voluptas?',
           name: 'Finn',
           email: '',
           designation: 'Senior Frontend Developer',
-          company: 'Shopify'
+          company: 'Shopify',
         },
         {
           avatar: 'user.svg',
-          msg:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio consequatur doloremque assumenda eligendi harum voluptas?',
+          msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio consequatur doloremque assumenda eligendi harum voluptas?',
           name: 'Finn',
           email: '',
           designation: 'Senior Frontend Developer',
-          company: 'Shopify'
+          company: 'Shopify',
         },
         {
           avatar: 'user.svg',
-          msg:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio consequatur doloremque assumenda eligendi harum voluptas?',
+          msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio consequatur doloremque assumenda eligendi harum voluptas?',
           name: 'Finn',
           email: '',
           designation: 'Senior Frontend Developer',
-          company: 'Shopify'
-        }
-      ]
+          company: 'Shopify',
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 

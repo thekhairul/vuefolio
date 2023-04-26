@@ -35,6 +35,7 @@ export default {
     '@nuxtjs/tailwindcss',
     // https://github.com/nuxt-community/svg-module
     '@nuxtjs/svg',
+    '@nuxtjs/fontawesome',
     // https://github.com/nuxt-community/google-fonts-module
     [
       '@nuxtjs/google-fonts',
@@ -42,6 +43,7 @@ export default {
         display: 'swap',
         families: {
           Poppins: [200, 400, 500, 800],
+          'PT Sans': [400, 700],
         },
       },
     ],
@@ -55,39 +57,6 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    [
-      'nuxt-fontawesome',
-      {
-        component: 'fa',
-        imports: [
-          {
-            set: '@fortawesome/free-solid-svg-icons',
-            icons: [
-              'faBars',
-              'faCloudDownloadAlt',
-              'faArrowLeft',
-              'faArrowCircleRight',
-              'faArrowCircleLeft',
-              'faQuoteLeft',
-              'faMapMarkerAlt',
-              'faPhoneAlt',
-              'faEnvelope',
-              'faSpinner',
-            ],
-          },
-          {
-            set: '@fortawesome/free-brands-svg-icons',
-            icons: [
-              'faFacebook',
-              'faGithub',
-              'faTwitter',
-              'faMedium',
-              'faLinkedin',
-            ],
-          },
-        ],
-      },
-    ],
   ],
 
   // https://github.com/nuxt-community/style-resources-module
@@ -107,4 +76,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  fontawesome: {
+    icons: {
+      solid: true,
+      brands: true,
+    },
+  },
 };

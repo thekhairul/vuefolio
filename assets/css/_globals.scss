@@ -23,8 +23,15 @@
   }
 }
 
+.no-click {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .page-header {
   &__text {
+    @apply font-poppins;
     text-shadow: -5px 2px 0px #42b883;
     letter-spacing: 0.2rem;
     transition: letter-spacing 0.3s var(--easing-function);

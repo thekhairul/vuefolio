@@ -36,14 +36,8 @@
     </div>
     <div class="home-main p-5">
       <div class="service mb-8">
-        <h2 class="text-color-accent font-semibold text-2xl mb-3">
-          my services
-        </h2>
-        <services />
-      </div>
-
-      <div class="pricing mb-4">
-        <pricing />
+        <h2 class="text-color-accent font-semibold text-2xl mb-3">my tools</h2>
+        <tools />
       </div>
 
       <div class="service mb-8">

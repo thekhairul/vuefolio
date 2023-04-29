@@ -12,7 +12,7 @@
       <h3 class="font-semibold uppercase tracking-wider text-gray-600">
         Khairul Anik
       </h3>
-      <h5>Web Frontend Engineer</h5>
+      <h5>Frontend Engineer</h5>
       <social-handles />
     </div>
 

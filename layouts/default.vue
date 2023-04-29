@@ -43,6 +43,9 @@ export default {
     },
   },
   mounted() {
+    if (window?.innerWidth > 1440) {
+      this.$store.commit('toggleSidebar', true);
+    }
     this.$root.$on('theme-change', val => {
       this.theme = val;
     });

@@ -30,17 +30,43 @@
           class="text-white text-center lg:text-left font-light tracking-widest anim-para opacity-0"
         >
           I am <i>Khairul Anik</i>, a Frontend developer based in Dhaka. I
-          usually build web interfaces with VUE &amp; React &#128151;
+          usually build web interfaces with Vue &amp; React &#128151;
         </p>
       </div>
     </div>
     <div class="home-main p-5">
-      <div class="service mb-8">
+      <div class="mb-8">
+        <h2 class="text-color-accent font-semibold text-2xl mb-3">about me</h2>
+        <p class="text-lg mb-4 opacity-80 tracking-wide">
+          I've been building frontend interfaces for little over 5 years.
+          Currently I remotely work at
+          <a
+            href="https://groove.cm/groovepages"
+            target="_blank"
+            class="text-color-accent dark:text-color-accent underline"
+            >Groovepages</a
+          >, the flagship product of GrooveDigital LTD. Here I collaborate with
+          my fellow teammates to build and maintain the cutting edge funnel
+          builder built with VUE.
+        </p>
+        <p class="text-lg mb-4 opacity-80 tracking-wide">
+          My primary language is Javascript. But I can speak Typescript and a
+          little bit of Python too. I love react for its customizability and vue
+          for its ease of use. I'm comfortable writing application with both of
+          them.
+        </p>
+        <p class="text-lg mb-4 opacity-80 tracking-wide">
+          When I'm not coding, you'll find me reading about philosophy or
+          religion. Currently I'm very much into Stoicism.
+        </p>
+      </div>
+
+      <div class="mb-8">
         <h2 class="text-color-accent font-semibold text-2xl mb-3">my tools</h2>
         <tools />
       </div>
 
-      <div class="service mb-8">
+      <div class="mb-8">
         <h2 class="text-color-accent font-semibold text-2xl mb-3">
           recommendation
         </h2>

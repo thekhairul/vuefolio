@@ -30,18 +30,6 @@
         </div>
       </div>
     </div>
-    <div class="swiper-button-prev">
-      <font-awesome-icon
-        :icon="['fas', 'arrow-circle-left']"
-        class="text-gray-400 text-2xl"
-      />
-    </div>
-    <div class="swiper-button-next">
-      <font-awesome-icon
-        :icon="['fas', 'arrow-circle-right']"
-        class="text-gray-400 text-2xl"
-      />
-    </div>
   </div>
 </template>
 
@@ -61,10 +49,6 @@ export default {
           640: {
             slidesPerView: 2,
           },
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
         },
         on: {
           init() {

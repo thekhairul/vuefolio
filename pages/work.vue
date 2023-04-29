@@ -20,7 +20,7 @@
         ref="headerPara"
         class="text-white text-center lg:text-left font-light tracking-widest anim-para opacity-0"
       >
-        Work Hard, Designate Harder
+        Work Hard, Dream Big
       </p>
     </div>
     <div class="work-main">

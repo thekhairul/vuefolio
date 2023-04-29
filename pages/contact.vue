@@ -37,22 +37,26 @@
           class="w-60 mb-4"
         />
         <address>
-          <p class="text-gray-600 not-italic mb-2">
-            <font-awesome-icon :icon="['fas', 'map-marker-alt']" />
+          <p class="text-gray-600 not-italic inline-flex items-center mb-2">
+            <font-awesome-icon :icon="['fas', 'map-marker-alt']" class="w-4" />
             <span class="font-light ml-2"
               >Bashundhara R/A, Dhaka, Bangladesh</span
             >
           </p>
-          <p class="text-gray-600 hover:text-color-accent not-italic mb-2">
-            <font-awesome-icon :icon="['fas', 'phone-alt']" />
+          <p
+            class="text-gray-600 hover:text-color-accent not-italic inline-flex items-center mb-2"
+          >
+            <font-awesome-icon :icon="['fas', 'phone-alt']" class="w-4" />
             <a
               href="tel:8801799582488"
               class="font-light hover:text-color-accent ml-2"
               >8801799582488</a
             >
           </p>
-          <p class="text-gray-600 hover:text-color-accent not-italic mb-2">
-            <font-awesome-icon :icon="['fas', 'envelope']" />
+          <p
+            class="text-gray-600 hover:text-color-accent not-italic inline-flex items-center mb-2"
+          >
+            <font-awesome-icon :icon="['fas', 'envelope']" class="w-4" />
             <a
               href="mailto:thekhairul.office@gmail.com"
               class="font-light hover:text-color-accent ml-2"

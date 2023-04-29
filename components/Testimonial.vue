@@ -98,5 +98,6 @@ export default {
 .testimonial-quote {
   top: -10px;
   left: 50px;
+  width: 40px;
 }
 </style>

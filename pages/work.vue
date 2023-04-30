@@ -86,7 +86,7 @@
                 class="text-xl text-color-dark hover:text-color-accent dark:text-color-light"
                 :class="{ 'no-click': !work.sourceLink }"
               >
-                <font-awesome-icon :icon="['fab', 'github']" />
+                <font-awesome-icon :icon="['fab', 'github']" class="w-6" />
               </a>
               <a
                 :href="work.demoLink || '#'"
@@ -95,7 +95,10 @@
                 class="text-xl text-color-dark hover:text-color-accent dark:text-color-light"
                 :class="{ 'no-click': !work.demoLink }"
               >
-                <font-awesome-icon :icon="['fas', 'external-link-alt']" />
+                <font-awesome-icon
+                  :icon="['fas', 'external-link-alt']"
+                  class="w-6"
+                />
               </a>
             </div>
             <div :class="work.contentClass">

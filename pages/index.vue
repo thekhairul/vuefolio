@@ -36,7 +36,11 @@
     </div>
     <div class="home-main p-5">
       <div class="mb-8">
-        <h2 class="text-color-accent font-semibold text-2xl mb-3">about me</h2>
+        <h2
+          class="text-color-accent dark:text-color-accent font-semibold text-2xl mb-3"
+        >
+          about me
+        </h2>
         <p class="text-lg mb-4 opacity-80 tracking-wide">
           I've been building frontend interfaces for little over 5 years.
           Currently I remotely work at
@@ -62,12 +66,18 @@
       </div>
 
       <div class="mb-8">
-        <h2 class="text-color-accent font-semibold text-2xl mb-3">my tools</h2>
+        <h2
+          class="text-color-accent dark:text-color-accent font-semibold text-2xl mb-3"
+        >
+          my tools
+        </h2>
         <tools />
       </div>
 
       <div class="mb-8">
-        <h2 class="text-color-accent font-semibold text-2xl mb-3">
+        <h2
+          class="text-color-accent dark:text-color-accent font-semibold text-2xl mb-3"
+        >
           recommendation
         </h2>
         <testimonial />

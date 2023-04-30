@@ -49,7 +49,7 @@
       >
         <font-awesome-icon
           :icon="['fas', 'cloud-download-alt']"
-          class="text-green-500 text-2xl"
+          class="text-green-500 text-2xl w-10"
         />
       </a>
     </div>

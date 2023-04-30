@@ -31,7 +31,9 @@ export default {
   data() {
     let theme = 'dark';
     if (typeof window !== 'undefined') {
-      theme = localStorage.getItem('khairul:vuefolio:theme');
+      if (localStorage.getItem('khairul:vuefolio:theme'))
+        theme = localStorage.getItem('khairul:vuefolio:theme');
+      else localStorage.setItem('khairul:vuefolio:theme', theme);
     }
     return {
       theme,
